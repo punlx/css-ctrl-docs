@@ -8,8 +8,9 @@ export const utilscss = css<{ wrapper: [] }>`
   @const hoverBorder {
     bd[2px solid --gray]
     br[24px]
-    p[24px]
+    p[36px]
     tsn[0.125s ease]
+    bs[border-box]
     hover(bd-c[--white])
   }
 
@@ -24,7 +25,7 @@ export const utilscss = css<{ wrapper: [] }>`
       @use hoverBorder
     }
 
-    @query [data-hoverBorder] {
+    @query [data-hoverborder] {
       @use hoverBorder
     }
   }

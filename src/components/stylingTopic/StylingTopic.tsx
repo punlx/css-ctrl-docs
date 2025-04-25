@@ -69,7 +69,7 @@ export const StylingTopic = () => {
         <div className={stylingTopiccss.copyPopover}>Successfully copied.</div>
       )}
 
-      <div data-install-wrapper data-hoverBorder>
+      <div data-install-wrapper data-hoverborder>
         <div data-install-lib>
           <p data-bold data-lib-text style={{ color: 'wheat' }}>
             Library
@@ -128,37 +128,73 @@ export const StylingTopic = () => {
         >
           css-ctrl compiler
         </p>
-        <p data-bold>🎉 You're all set!</p>
+        <p data-bold className="allset">
+          🎉 You're all set!
+        </p>
         <p data-thin>No additional setup or config needed — you're ready to go!</p>
       </div>
 
       {/* A quick introduction */}
-      <p data-bold>A quick introduction</p>
+      <p data-bold>Introduction</p>
       <div className="quickIntroWrapper">
-        <p data-thin style={{ lineHeight: 2 }}>
-          &nbsp; <em data-lib>css-ctrl</em> is not a typical <em>CSS-in-JS</em> library. Instead,
-          it’s a <em>new way</em> to write <em>CSS in TypeScript</em> — designed to{' '}
+        <p data-thin>
+          <em data-lib>css-ctrl</em> is not a typical <em>CSS-in-JS</em> library. Instead, it’s a{' '}
+          <em>new way</em> to write <em>CSS in TypeScript</em> — designed to{' '}
           <em>boost your styling speed, efficiency, and control.</em> You’ll write your styles in
           <em data-lib>*.ctrl.ts</em> files using a <em>highly expressive syntax.</em> Then, the
           <em data-lib>css-ctrl compiler</em> will <em>automatically generate</em> a corresponding{' '}
-          <em data-lib>*.ctrl.css</em> file <em>on save.</em> This compiled CSS is{' '}
+          <em data-lib>*.ctrl.css</em> file <em>on save.</em> This <em>compiled CSS</em> is{' '}
           <em>auto-imported</em> back into the same <em data-lib>.ctrl.ts</em> file — so all you
           have to do is <em>import</em> the <em data-lib>.ctrl.ts</em> file wherever you need styles
-          in <em>your UI.</em> <em data-lib>css-ctrl</em> delivers <em>dynamic styling</em> with a{' '}
-          <em data-lib>zero-runtime</em> guarantee.
+          in <em>your UI.</em> <em data-lib>css-ctrl</em> delivers <em>dynamic styling</em> with a
+          <em data-lib>zero-runtime</em> guarantee — and much more.
           <br></br>
           <br></br>
           <em>
-            &nbsp; If you enjoy clean code, minimal tools, and full styling control —{' '}
+            If you enjoy fast styling, minimal tools, full styling control and great DX —{' '}
             <em data-lib>css-ctrl</em> is made for you.
           </em>
         </p>
       </div>
-      <img draggable={false} width={650} src="/public/imgs/1.gif" alt="" />
+      <img draggable={false} width={700} src="/public/imgs/2.gif" alt="" />
 
       {/* Get started */}
       <p data-bold>Get Started</p>
-      
+      <p data-thin>
+        <em>First,</em> you need to <em>create</em> a <em data-lib>.ctrl.ts</em> file. For example,
+        let's name it <em data-lib>utils.ctrl.ts</em>. After that, you can create a{' '}
+        <em data-lib>css-ctrl template</em> using the <em>snippet</em> by simply typing{' '}
+        <em>"ztrl"</em>. Once you <em>save,</em> the <em data-lib>css-ctrl compiler</em>
+        will <em>generate</em> the <em data-lib>CSS</em> in a <em>new file called</em>
+        <em data-lib>utils.ctrl.css</em>, and it will <em>automatically import</em>
+        <em data-lib>utils.css.ts</em>, making <em data-lib>utils.ctrl.ts</em> ready for use in{' '}
+        <em>your UI.</em>
+      </p>
+      <img draggable={false} width={700} src="/public/imgs/1.gif" alt="" />
+      <p>
+        <em data-lib>css-ctrl</em> introduces a <em>unique</em>, intuitive <em>syntax</em> where you
+        can create <em>styles</em> simply by typing <em>short abbreviations.</em> you don't need to{' '}
+        <em>memorize</em> a completely <em>new syntax.</em> The <em data-lib>css-ctrl compiler</em>{' '}
+        will <em>suggests style completions</em> just like <em>regular CSS,</em> making the styling
+        process <em>smooth and natural</em> — with virtually <em>no learning curve</em> for styling.
+      </p>
+
+      <img draggable={false} data-img-3 src="/public/imgs/3.png" alt="" />
+      <p>
+        <em data-lib>utils.ctrl.css</em> contains a <em>scope class name</em>, which you will{' '}
+        <em>learn about later.</em>
+      </p>
+
+      <p>
+        <p>
+          <em>After</em> creating the <em data-lib>utils.ctrl.ts</em> file, you simply need to{' '}
+          <em>import</em> it into <em>your UI</em> and use the <em>class names</em> you have{' '}
+          <em>defined</em>.
+        </p>
+      </p>
+      <img draggable={false} src="/public/imgs/4.gif" alt="" />
+      <img draggable={false} data-img-5 src="/public/imgs/5.png" alt="" />
+      <p data-bold>Dynamic Styling</p>
     </div>
   );
 };

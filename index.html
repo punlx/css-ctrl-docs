@@ -8,16 +8,20 @@
   </head>
   <body>
     <div class="space-overlay">
+      <!-- เลเยอร์แสงเหนือใหม่ -->
+      <div class="aurora-overlay"></div>
+
+      <!-- ของเดิม ห้ามยุ่ง -->
       <div class="star-overlay" id="star-overlay"></div>
       <div class="shooting-star-overlay" id="shooting-star-overlay"></div>
     </div>
-
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
   <script>
     // 🌟 STARFIELD
     const starContainer = document.getElementById('star-overlay');
+
     for (let i = 0; i < 120; i++) {
       const star = document.createElement('div');
       star.className = 'star';
@@ -27,7 +31,7 @@
       star.style.left = `${Math.random() * 100}vw`;
 
       // Size: mostly small stars
-      const size = Math.random() * 1.5 + 1.5;
+      const size = Math.random() * 2 + 2;
       star.style.width = `${size}px`;
       star.style.height = `${size}px`;
 
@@ -37,12 +41,9 @@
       // Color aura
       const hue = Math.floor(Math.random() * 360);
       const color = `hsl(${hue}, 100%, 85%)`;
-      const glow1 = `0 0 ${size * 4}px hsl(${hue}, 100%, 65%)`;
-      const glow2 = `0 0 ${size * 8}px hsl(${hue}, 100%, 55%)`;
-      const glow3 = `0 0 ${size * 12}px hsl(${hue}, 100%, 50%)`;
 
       star.style.background = color;
-      star.style.boxShadow = `${glow1}, ${glow2}, ${glow3}`;
+      star.style.filter = `blur(1px)`;
 
       starContainer.appendChild(star);
     }
@@ -59,16 +60,28 @@
 
       star.style.left = `${startX}px`;
       star.style.top = `${startY}px`;
-      star.style.animationDelay = `${Math.random() * 5}s`;
+
+      // ✅ Fixed: Keep star long enough after delay
+      const delay = Math.random() * 5; // seconds
+      star.style.animationDelay = `${delay}s`;
+
+      const duration = 4; // seconds
+      const totalLifetime = (delay + duration) * 1000;
 
       shootingContainer.appendChild(star);
 
-      setTimeout(() => shootingContainer.removeChild(star), 5000);
+      setTimeout(() => {
+        shootingContainer.removeChild(star);
+      }, totalLifetime);
     }
 
-    // Launch shooting stars every 3–5 seconds
-    setInterval(() => {
+    // Launch shooting stars every 5–12 seconds
+    function scheduleShootingStar() {
       createShootingStar();
-    }, Math.random() * 7000 + 5000);
+      const nextDelay = Math.random() * 7000 + 5000; // 5s - 12s
+      setTimeout(scheduleShootingStar, nextDelay);
+    }
+
+    scheduleShootingStar();
   </script>
 </html>

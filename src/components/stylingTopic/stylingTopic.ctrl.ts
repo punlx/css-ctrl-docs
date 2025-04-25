@@ -21,10 +21,45 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
   }
 
   .box {
-    w[100%]
+    w[700px]
+    screen(max-w[700px], w[auto])
     @use wrapper
     gap[42px]
     pb[120px]
+
+    > .allset {
+      c[#ffcf76]
+    }
+
+    > .groupImg {
+      d[flex]
+      fdir[column]
+      gap[12px]
+      ai[center]
+    }
+
+    > img {
+      w[700px]
+      screen(max-w[700px], w[100%])
+    }
+
+    > img[data-img-3] {
+      w[400px]
+      screen(max-w[700px], w[100%])
+    }
+
+    > img[data-img-5] {
+      w[500px]
+      screen(max-w[700px], w[100%])
+    }
+
+    > p {
+      lh[2]
+    }
+
+    > img {
+      mbm[lighten]
+    }
 
     > em[data-lib] {
       bg[#373adb]
@@ -47,11 +82,6 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
     > [data-install-lib] {
       d[flex]
       gap[12px]
-    }
-
-    > .quickIntroWrapper {
-      w[700px]
-      screen(max-w[700px], w[auto])
     }
 
     > [data-install] {

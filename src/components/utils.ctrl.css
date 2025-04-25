@@ -8,18 +8,20 @@
 .utils_wrapper img {
   border: 2px solid var(--gray);
   border-radius: 24px;
-  padding: 24px;
+  padding: 36px;
   transition: 0.125s ease;
+  box-sizing: border-box;
 }
 .utils_wrapper img:hover {
   border-color: var(--white);
 }
-.utils_wrapper [data-hoverBorder] {
+.utils_wrapper [data-hoverborder] {
   border: 2px solid var(--gray);
   border-radius: 24px;
-  padding: 24px;
+  padding: 36px;
   transition: 0.125s ease;
+  box-sizing: border-box;
 }
-.utils_wrapper [data-hoverBorder]:hover {
+.utils_wrapper [data-hoverborder]:hover {
   border-color: var(--white);
 }
