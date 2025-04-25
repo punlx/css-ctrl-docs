@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+    <div class="space-overlay">
+      <div class="star-overlay" id="star-overlay"></div>
+      <div class="shooting-star-overlay" id="shooting-star-overlay"></div>
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+  <script>
+    // 🌟 STARFIELD
+    const starContainer = document.getElementById('star-overlay');
+    for (let i = 0; i < 120; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+
+      // Position
+      star.style.top = `${Math.random() * 100}vh`;
+      star.style.left = `${Math.random() * 100}vw`;
+
+      // Size: mostly small stars
+      const size = Math.random() * 1.5 + 1.5;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+
+      // Delay
+      star.style.animationDelay = `${Math.random() * 8}s`;
+
+      // Color aura
+      const hue = Math.floor(Math.random() * 360);
+      const color = `hsl(${hue}, 100%, 85%)`;
+      const glow1 = `0 0 ${size * 4}px hsl(${hue}, 100%, 65%)`;
+      const glow2 = `0 0 ${size * 8}px hsl(${hue}, 100%, 55%)`;
+      const glow3 = `0 0 ${size * 12}px hsl(${hue}, 100%, 50%)`;
+
+      star.style.background = color;
+      star.style.boxShadow = `${glow1}, ${glow2}, ${glow3}`;
+
+      starContainer.appendChild(star);
+    }
+
+    // 🌠 SHOOTING STARS
+    const shootingContainer = document.getElementById('shooting-star-overlay');
+
+    function createShootingStar() {
+      const star = document.createElement('div');
+      star.className = 'shooting-star';
+
+      const startX = Math.random() * window.innerWidth * 0.8;
+      const startY = Math.random() * window.innerHeight * 0.4;
+
+      star.style.left = `${startX}px`;
+      star.style.top = `${startY}px`;
+      star.style.animationDelay = `${Math.random() * 5}s`;
+
+      shootingContainer.appendChild(star);
+
+      setTimeout(() => shootingContainer.removeChild(star), 5000);
+    }
+
+    // Launch shooting stars every 3–5 seconds
+    setInterval(() => {
+      createShootingStar();
+    }, Math.random() * 3000 + 2000);
+  </script>
+</html>

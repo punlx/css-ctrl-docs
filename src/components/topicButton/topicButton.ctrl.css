@@ -1,0 +1,92 @@
+:root {
+  --styling-topicButton_wrap: var(--gray);
+  --theming-topicButton_wrap: var(--gray);
+  --plugin-topicButton_wrap: var(--gray);
+  --errors-topicButton_wrap: var(--gray);
+}
+.topicButton_wrap {
+  display: flex;
+  gap: 12px;
+  color: var(--gray);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.topicButton_wrap [data-topic] {
+  display: flex;
+  border: 2px solid var(--gray);
+  gap: 12px;
+  align-items: center;
+  border-radius: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+.topicButton_wrap [data-topic]:hover {
+  border: 2px solid #c6c4d3;
+}
+.topicButton_wrap [data-topic]::before {
+  border: var(--gray);
+}
+.topicButton_wrap [data-topic="styling"] {
+  border-color: var(--styling-topicButton_wrap);
+}
+.topicButton_wrap [data-topic="styling"] p:nth-child(2) {
+  color: #ffffff;
+}
+.topicButton_wrap [data-topic="styling"] code {
+  --color: white;
+  --bg: #3535f9;
+  background-color: var(--bg);
+  color: var(--color);
+  padding: 6px;
+  border-radius: 12px;
+  font-size: 18px;
+}
+.topicButton_wrap [data-topic="theming"] {
+  border-color: var(--theming-topicButton_wrap);
+}
+.topicButton_wrap [data-topic="theming"] p:nth-child(2) {
+  color: #ffffff;
+}
+.topicButton_wrap [data-topic="theming"] code {
+  --color: white;
+  --bg: #3535f9;
+  background-color: var(--bg);
+  color: var(--color);
+  padding: 6px;
+  border-radius: 12px;
+  font-size: 18px;
+}
+.topicButton_wrap [data-topic="errors"] {
+  border-color: var(--errors-topicButton_wrap);
+}
+.topicButton_wrap [data-topic="errors"] p:nth-child(1) {
+  color: white;
+}
+.topicButton_wrap [data-topic="errors"] code {
+  --color: white;
+  --bg: #bd3737;
+  background-color: var(--bg);
+  color: var(--color);
+  padding: 6px;
+  border-radius: 12px;
+  font-size: 18px;
+}
+.topicButton_wrap [data-topic="plugin"] {
+  border-color: var(--plugin-topicButton_wrap);
+}
+.topicButton_wrap [data-topic="plugin"] p:nth-child(2) {
+  color: white;
+}
+.topicButton_wrap [data-topic="plugin"] code {
+  --color: white;
+  --bg: #3535f9;
+  background-color: var(--bg);
+  color: var(--color);
+  padding: 6px;
+  border-radius: 12px;
+  font-size: 18px;
+}

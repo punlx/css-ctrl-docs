@@ -1,0 +1,5 @@
+.page [data-bold] {
+  font-size: 32px;
+  font-family: Poppins-Bold;
+  line-height: 1.5;
+}

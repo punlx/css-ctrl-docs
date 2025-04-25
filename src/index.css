@@ -1,0 +1,187 @@
+:root {
+  background-color: #000000;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'Poppins-Black';
+  src: url('/fonts/Poppins-Black.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-BlackItalic';
+  src: url('/fonts/Poppins-BlackItalic.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url('/fonts/Poppins-Bold.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-BoldItalic';
+  src: url('/fonts/Poppins-BoldItalic.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-ExtraBold';
+  src: url('/fonts/Poppins-ExtraBold.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-ExtraBoldItalic';
+  src: url('/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-ExtraLight';
+  src: url('/fonts/Poppins-ExtraLight.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-ExtraLightItalic';
+  src: url('/fonts/Poppins-ExtraLightItalic.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-Italic';
+  src: url('/fonts/Poppins-Italic.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-Light';
+  src: url('/fonts/Poppins-Light.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-LightItalic';
+  src: url('/fonts/Poppins-LightItalic.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: url('/fonts/Poppins-Medium.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-MediumItalic';
+  src: url('/fonts/Poppins-MediumItalic.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-SemiBold';
+  src: url('/fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-SemiBoldItalic';
+  src: url('/fonts/Poppins-SemiBoldItalic.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-Thin';
+  src: url('/fonts/Poppins-Thin.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-ThinItalic';
+  src: url('/fonts/Poppins-ThinItalic.ttf') format('truetype');
+  font-display: swap;
+}
+.space-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* ----------------------- STARS ----------------------- */
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: twinkle 3.5s infinite ease-in-out alternate, floatXY 22s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+}
+
+@keyframes floatXY {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(6px, -4px);
+  }
+  100% {
+    transform: translate(-5px, 5px);
+  }
+}
+
+/* ------------------ SHOOTING STARS ------------------- */
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(to bottom, white, transparent);
+  opacity: 0;
+  transform: rotate(120deg);
+  animation: shoot 4s ease-in-out forwards;
+  filter: blur(1px);
+  z-index: -1;
+}
+
+.shooting-star::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, white 10%, transparent 70%);
+  opacity: 0.8;
+  filter: blur(8px);
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(-10vw, -10vh) rotate(120deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(120vw, 120vh) rotate(120deg);
+    opacity: 0;
+  }
+}

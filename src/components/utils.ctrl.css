@@ -1,0 +1,25 @@
+.utils_wrapper {
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 48px;
+}
+.utils_wrapper img {
+  border: 2px solid var(--gray);
+  border-radius: 24px;
+  padding: 24px;
+  transition: 0.125s ease;
+}
+.utils_wrapper img:hover {
+  border-color: var(--white);
+}
+.utils_wrapper [data-hoverBorder] {
+  border: 2px solid var(--gray);
+  border-radius: 24px;
+  padding: 24px;
+  transition: 0.125s ease;
+}
+.utils_wrapper [data-hoverBorder]:hover {
+  border-color: var(--white);
+}

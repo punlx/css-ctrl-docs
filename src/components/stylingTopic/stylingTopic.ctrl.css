@@ -1,0 +1,74 @@
+.stylingTopic_copyPopover {
+  padding: 12px;
+}
+.popoverPluginContainer:has(.stylingTopic_copyPopover) {
+  background-color: #222222;
+  border-radius: 12px;
+  color: #a8a8a8;
+}
+:root {
+  --cs-stylingTopic_cursorInstall: pointer;
+}
+.stylingTopic_cursorInstall {
+  cursor: var(--cs-stylingTopic_cursorInstall);
+}
+.stylingTopic_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 42px;
+  width: 100%;
+  padding-bottom: 120px;
+}
+.stylingTopic_box em[data-lib] {
+  background-color: #373adb;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 999px;
+}
+.stylingTopic_box em {
+  color: wheat;
+}
+.stylingTopic_box [data-install-wrapper] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 100px !important;
+  border-radius: 16px;
+}
+.stylingTopic_box [data-install-lib] {
+  display: flex;
+  gap: 12px;
+}
+.stylingTopic_box .quickIntroWrapper {
+  width: 700px;
+}
+@media only screen and (max-width: 700px) {
+  .stylingTopic_box .quickIntroWrapper {
+    width: auto;
+  }
+}
+.stylingTopic_box [data-install] {
+  padding: 12px;
+  color: #c6c6c6;
+  box-sizing: border-box;
+  background-color: #232323;
+  transition: 0.25s ease;
+  border-radius: 12px;
+  user-select: none;
+}
+.stylingTopic_box [data-install-lib-txt]:hover {
+  background-color: #303030;
+  color: wheat;
+}
+.stylingTopic_box [data-install-ext]:hover {
+  background-color: #303030;
+  color: #c3b3f5;
+}
+.stylingTopic_box [data-wrapper] {
+  display: flex;
+  gap: 6px;
+}
