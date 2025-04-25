@@ -185,54 +185,32 @@ p {
     opacity: 0;
   }
 }
-/* ------------------- AURORA LAYER ------------------- */
+/* --------------------- AURORA --------------------- */
 .aurora-overlay {
   position: absolute;
-  inset: 0;             /* ครอบคลุมเต็มจอ */
-  z-index: -2;          /* อยู่ด้านหลังดาว (เพราะของเดิม star กับ shooting-star ใช้ -1) */
-  pointer-events: none; /* ไม่ให้มีผลต่อการคลิกใด ๆ */
-  overflow: hidden;     /* ป้องกันไม่ให้เอฟเฟกต์ล้นจอ */
-  
-  /* อาจใช้การไล่สีหลายชุดซ้อนกัน เพื่อเลียนแบบแสงเหนือหลากสี
-     ปรับค่า rgba() ได้ตามชอบ */
-  background: radial-gradient(
-              circle at 30% 30%,
-              rgba(128, 255, 212, 0.25),
-              rgba(0, 0, 0, 0) 70%
-             ),
-             radial-gradient(
-              circle at 70% 50%,
-              rgba(255, 128, 255, 0.15),
-              rgba(0, 0, 0, 0) 60%
-             );
-  
-  /* เบลอเล็กน้อยให้เป็นประกายฟุ้ง ๆ */
-  filter: blur(40px);
-  
-  /* เพิ่ม animation ให้แสงเหนือค่อย ๆ เคลื่อน */
-  animation: auroraDance 14s ease-in-out infinite alternate;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 80%, rgba(0,255,191,0.2), transparent 60%),
+              radial-gradient(circle at 30% 50%, rgba(102,0,255,0.15), transparent 60%),
+              radial-gradient(circle at 70% 40%, rgba(0,153,255,0.18), transparent 60%);
+  animation: aurora-move 12s infinite linear alternate;
+  mix-blend-mode: screen;
+  filter: blur(80px) brightness(1.2);
 }
 
-/* Keyframes แอนิเมชันเลียนแบบการเคลื่อนตัวของแสง */
-@keyframes auroraDance {
+/* ทำให้มันเคลื่อนไหวเป็นคลื่น */
+@keyframes aurora-move {
   0% {
-    transform: translateY(0) translateX(0) rotate(0deg);
-    opacity: 0.4;
-  }
-  25% {
-    transform: translateY(-2%) translateX(1%) rotate(2deg);
+    transform: translateY(0px) scale(1) rotate(0deg);
     opacity: 0.6;
   }
   50% {
-    transform: translateY(-1%) translateX(-1%) rotate(-2deg);
-    opacity: 0.5;
-  }
-  75% {
-    transform: translateY(2%) translateX(-2%) rotate(3deg);
-    opacity: 0.7;
+    transform: translateY(-20px) scale(1.05) rotate(1deg);
+    opacity: 0.9;
   }
   100% {
-    transform: translateY(0) translateX(0) rotate(0deg);
-    opacity: 0.4;
+    transform: translateY(-10px) scale(1.02) rotate(-1deg);
+    opacity: 0.6;
   }
 }
