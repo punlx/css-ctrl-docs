@@ -1,8 +1,9 @@
 :root {
-  --styling-topicButton_wrap: var(--gray);
+  --start-topicButton_wrap: var(--gray);
   --theming-topicButton_wrap: var(--gray);
   --plugin-topicButton_wrap: var(--gray);
   --errors-topicButton_wrap: var(--gray);
+  --advanced-topicButton_wrap: var(--gray);
 }
 .topicButton_wrap {
   display: flex;
@@ -30,13 +31,28 @@
 .topicButton_wrap [data-topic]::before {
   border: var(--gray);
 }
-.topicButton_wrap [data-topic="styling"] {
-  border-color: var(--styling-topicButton_wrap);
+.topicButton_wrap [data-topic="start"] {
+  border-color: var(--start-topicButton_wrap);
 }
-.topicButton_wrap [data-topic="styling"] p:nth-child(2) {
+.topicButton_wrap [data-topic="start"] p:nth-child(2) {
   color: #ffffff;
 }
-.topicButton_wrap [data-topic="styling"] code {
+.topicButton_wrap [data-topic="start"] code {
+  --color: white;
+  --bg: #3535f9;
+  background-color: var(--bg);
+  color: var(--color);
+  padding: 6px;
+  border-radius: 12px;
+  font-size: 18px;
+}
+.topicButton_wrap [data-topic="advanced"] {
+  border-color: var(--advanced-topicButton_wrap);
+}
+.topicButton_wrap [data-topic="advanced"] p:nth-child(2) {
+  color: #ffffff;
+}
+.topicButton_wrap [data-topic="advanced"] code {
   --color: white;
   --bg: #3535f9;
   background-color: var(--bg);

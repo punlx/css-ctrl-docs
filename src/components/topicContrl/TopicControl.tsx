@@ -25,13 +25,14 @@ export const TopicControl = () => {
 
   switch (currentTopicSignal.value) {
     default:
-    case 'styling':
+    case 'start':
       return (
         <Wrapper>
           <StylingTopic></StylingTopic>
         </Wrapper>
       );
-
+    case 'advanced':
+      return <Wrapper>advanced</Wrapper>;
     case 'theming':
       return (
         <Wrapper>

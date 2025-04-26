@@ -8,11 +8,12 @@
   </head>
   <body>
     <div class="space-overlay">
-      <div class="aurora-overlay"></div> <!-- 🌌 แสงเหนือ -->
+      <div class="aurora-overlay"></div>
+      <!-- 🌌 แสงเหนือ -->
       <div class="star-overlay" id="star-overlay"></div>
       <div class="shooting-star-overlay" id="shooting-star-overlay"></div>
     </div>
-    
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
@@ -28,20 +29,28 @@
       star.style.top = `${Math.random() * 100}vh`;
       star.style.left = `${Math.random() * 100}vw`;
 
-      // Size: mostly small stars
+      // Random star size
       const size = Math.random() * 2 + 2;
       star.style.width = `${size}px`;
       star.style.height = `${size}px`;
 
-      // Delay
+      // ---- ปรับวิธีใช้ random animation duration ----
+      // สุ่มระยะเวลา twinkle ให้อยู่ในช่วง 3 - 6 วินาที
+      const twinkleDuration = (Math.random() * 3 + 3).toFixed(2);
+      // เอาค่าไปใส่ใน animationDuration (multiple animations แยกด้วย ',')
+      // ตัวแรกคือ twinkle, ตัวที่สองคือ floatXY
+      star.style.animationDuration = `${twinkleDuration}s, 22s`;
+
+      // สำหรับ animation delay เดิม อาจคงไว้ หรือปรับได้ตามต้องการ
       star.style.animationDelay = `${Math.random() * 8}s`;
 
       // Color aura
       const hue = Math.floor(Math.random() * 360);
       const color = `hsl(${hue}, 100%, 85%)`;
-
       star.style.background = color;
-      star.style.filter = `blur(1px)`;
+
+      // ถ้าไม่อยาก blur ก็เอาออก (comment ไว้หรือเอาออก)
+      // star.style.filter = 'blur(1px)';
 
       starContainer.appendChild(star);
     }

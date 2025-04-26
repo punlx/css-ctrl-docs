@@ -9,7 +9,7 @@ export const utilscss = css<{ wrapper: [] }>`
     bd[2px solid --gray]
     br[24px]
     p[36px]
-    tsn[0.125s ease]
+    ts[0.125s ease]
     bs[border-box]
     hover(bd-c[--white])
   }

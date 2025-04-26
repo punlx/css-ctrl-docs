@@ -4,11 +4,18 @@ import { css } from 'css-ctrl';
 export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box: [] }>`
   @scope stylingTopic
 
+  @const badge {
+    py[2px]
+    px[6px]
+    br[999px]
+    c[white]
+  }
+
   @const wrapper {
     d[flex]
-    fdir[column]
+    fx-d[column]
     ai[center]
-    gap[16px]
+    gp[16px]
   }
 
   .copyPopover {
@@ -24,8 +31,52 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
     w[700px]
     screen(max-w[700px], w[auto])
     @use wrapper
-    gap[42px]
+    gp[42px]
     pb[120px]
+
+    > [data-lib-text] {
+      tx-w[nowrap]
+    }
+
+    > .first-letter {
+      ml[32px]
+    }
+
+    > .img-detail {
+      ps[relative]
+
+      > [data-dom] {
+        ps[absolute]
+        r[16px]
+        t[60px]
+        px[8px]
+        py[4px]
+        br[99px]
+        w[26px]
+        h[26px]
+        h
+      }
+
+      > :first-child {
+        ps[absolute]
+        r[16px]
+        t[16px]
+        bg[#5937ff]
+        px[8px]
+        py[4px]
+        br[99px]
+      }
+
+      > :first-child[data-click] {
+        cs[pointer]
+        ps[absolute]
+        z[2]
+        hover(bg[#795eff])
+        ts[0.25s ease]
+        us[none]
+        active(bg[#ab9bff])
+      }
+    }
 
     > .allset {
       c[#ffcf76]
@@ -33,8 +84,8 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
 
     > .groupImg {
       d[flex]
-      fdir[column]
-      gap[12px]
+      fx-d[column]
+      gp[12px]
       ai[center]
     }
 
@@ -43,8 +94,16 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
       screen(max-w[700px], w[100%])
     }
 
+    > [data-img-6] {
+      w[650px]
+    }
+
+    > [data-img-7] {
+      w[600px]
+    }
+
     > img[data-img-3] {
-      w[400px]
+      w[450px]
       screen(max-w[700px], w[100%])
     }
 
@@ -55,17 +114,17 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
 
     > p {
       lh[2]
+      ls[0.02em]
+      tx-a[justify]
     }
 
     > img {
-      mbm[lighten]
+      mbm[screen]
     }
 
     > em[data-lib] {
+      @use badge
       bg[#373adb]
-      py[2px]
-      px[6px]
-      br[999px]
     }
 
     > em {
@@ -76,20 +135,20 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
       @use wrapper
       p[100px]!
       br[16px]
-      gap[24px]
+      gp[24px]
     }
 
     > [data-install-lib] {
       d[flex]
-      gap[12px]
+      gp[12px]
     }
 
     > [data-install] {
       p[12px]
       c[#c6c6c6]
       bs[border-box]
-      bg[#232323]
-      tsn[0.25s ease]
+      bg[#202020]
+      ts[0.25s ease]
       br[12px]
       us[none]
     }
@@ -104,7 +163,7 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
 
     > [data-wrapper] {
       d[flex]
-      gap[6px]
+      gp[6px]
     }
   }
 `;

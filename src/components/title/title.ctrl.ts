@@ -10,7 +10,8 @@ export const titlecss = css<{ wrap: []; title: [] }>`
     p[60px]
     ai[center]
     bs[border-box]
-    gap[46px]
+    gp[46px]
+    screen(max-w[700px],fx-d[column])
 
     @query img {
       us[none]

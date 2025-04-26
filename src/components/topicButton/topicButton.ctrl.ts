@@ -2,7 +2,7 @@ import './topicButton.ctrl.css';
 import { css } from 'css-ctrl';
 
 // css-ctrl mode:base
-export const topicButtoncss = css<{ wrap: ['styling', 'theming', 'plugin', 'errors'] }>`
+export const topicButtoncss = css<{ wrap: ['start', 'theming', 'plugin', 'errors', 'advanced'] }>`
   @scope topicButton
 
   @const code {
@@ -14,33 +14,48 @@ export const topicButtoncss = css<{ wrap: ['styling', 'theming', 'plugin', 'erro
   }
 
   .wrap {
-    --&styling[--gray]
+    --&start[--gray]
     --&theming[--gray]
     --&plugin[--gray]
     --&errors[--gray]
+    --&advanced[--gray]
     d[flex]
-    gap[12px]
+    gp[12px]
     c[--gray]
     d[flex]
     jc[center]
-    wrap[wrap]
+    fx-w[wrap]
 
     @query [data-topic] {
       d[flex]
       bd[2px solid --gray]
-      gap[12px]
+      gp[12px]
       ai[center]
       br[12px]
       px[16px]
       py[12px]
-      tsn[0.25s ease]
+      ts[0.25s ease]
       hover(bd[2px solid #c6c4d3])
       before(bd[--gray])
       cs[pointer]
     }
 
-    @query [data-topic="styling"] {
-      bd-c[--&styling]
+    @query [data-topic="start"] {
+      bd-c[--&start]
+
+      @query p:nth-child(2) {
+        c[#ffffff]
+      }
+
+      @query code {
+        --color[white]
+        --bg[#3535f9]
+        @use code
+      }
+    }
+
+    @query [data-topic="advanced"] {
+      bd-c[--&advanced]
 
       @query p:nth-child(2) {
         c[#ffffff]

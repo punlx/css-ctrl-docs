@@ -25,6 +25,51 @@
     width: auto;
   }
 }
+.stylingTopic_box [data-lib-text] {
+  text-wrap: nowrap;
+}
+.stylingTopic_box .first-letter {
+  margin-left: 32px;
+}
+.stylingTopic_box .img-detail {
+  position: relative;
+}
+.stylingTopic_box .img-detail [data-dom] {
+  position: absolute;
+  right: 16px;
+  top: 60px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 99px;
+  width: 26px;
+  height: 26px;
+}
+.stylingTopic_box .img-detail :first-child {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background-color: #5937ff;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 99px;
+}
+.stylingTopic_box .img-detail :first-child[data-click] {
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  transition: 0.25s ease;
+  user-select: none;
+}
+.stylingTopic_box .img-detail :first-child[data-click]:hover {
+  background-color: #795eff;
+}
+.stylingTopic_box .img-detail :first-child[data-click]:active {
+  background-color: #ab9bff;
+}
 .stylingTopic_box .allset {
   color: #ffcf76;
 }
@@ -42,8 +87,14 @@
     width: 100%;
   }
 }
+.stylingTopic_box [data-img-6] {
+  width: 650px;
+}
+.stylingTopic_box [data-img-7] {
+  width: 600px;
+}
 .stylingTopic_box img[data-img-3] {
-  width: 400px;
+  width: 450px;
 }
 @media only screen and (max-width: 700px) {
   .stylingTopic_box img[data-img-3] {
@@ -60,17 +111,20 @@
 }
 .stylingTopic_box p {
   line-height: 2;
+  letter-spacing: 0.02em;
+  text-align: justify;
 }
 .stylingTopic_box img {
-  mix-blend-mode: lighten;
+  mix-blend-mode: screen;
 }
 .stylingTopic_box em[data-lib] {
-  background-color: #373adb;
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 6px;
   padding-right: 6px;
   border-radius: 999px;
+  color: white;
+  background-color: #373adb;
 }
 .stylingTopic_box em {
   color: wheat;
@@ -91,7 +145,7 @@
   padding: 12px;
   color: #c6c6c6;
   box-sizing: border-box;
-  background-color: #232323;
+  background-color: #202020;
   transition: 0.25s ease;
   border-radius: 12px;
   user-select: none;

@@ -118,16 +118,19 @@ p {
   border-radius: 50%;
   background: white;
   animation: twinkle 3.5s infinite ease-in-out alternate, floatXY 22s infinite ease-in-out;
+  will-change: transform, opacity;
+  animation-fill-mode: both;
+  filter:blur(1px)
 }
 
 @keyframes twinkle {
   0% {
-    opacity: 0.1;
+    opacity: 0.2;
     transform: scale(1);
   }
   50% {
-    opacity: 1;
-    transform: scale(1.4);
+    opacity: 0.8;
+    transform: scale(1.2);
   }
   100% {
     opacity: 0.2;
@@ -135,15 +138,19 @@ p {
   }
 }
 
+/* floatXY อาจคงไว้เหมือนเดิมได้ */
 @keyframes floatXY {
   0% {
     transform: translate(0, 0);
   }
-  50% {
+  25% {
     transform: translate(6px, -4px);
   }
-  100% {
+  75% {
     transform: translate(-5px, 5px);
+  }
+  75% {
+    transform: translate(0, 0);
   }
 }
 
@@ -191,26 +198,35 @@ p {
   inset: 0;
   z-index: -2;
   pointer-events: none;
-  background: radial-gradient(circle at 50% 80%, rgba(0,255,191,0.2), transparent 60%),
-              radial-gradient(circle at 30% 50%, rgba(102,0,255,0.15), transparent 60%),
-              radial-gradient(circle at 70% 40%, rgba(0,153,255,0.18), transparent 60%);
-  animation: aurora-move 12s infinite linear alternate;
+  background: radial-gradient(circle at 50% 80%, rgba(0, 255, 191, 0.2), transparent 60%),
+    radial-gradient(circle at 30% 50%, rgba(102, 0, 255, 0.15), transparent 60%),
+    radial-gradient(circle at 70% 40%, rgba(0, 153, 255, 0.18), transparent 60%);
+  animation: aurora-move 24s ease-in-out infinite alternate;
   mix-blend-mode: screen;
   filter: blur(80px) brightness(1.2);
+  opacity: 0.7;
 }
 
-/* ทำให้มันเคลื่อนไหวเป็นคลื่น */
+/* เคลื่อนไหวแบบคลื่น + ซ้าย-ขวา + หมุน */
 @keyframes aurora-move {
   0% {
-    transform: translateY(0px) scale(1) rotate(0deg);
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+    opacity: 0.4;
+  }
+  25% {
+    transform: translate(-20px, -10px) scale(1.04) rotate(1deg);
     opacity: 0.6;
   }
   50% {
-    transform: translateY(-20px) scale(1.05) rotate(1deg);
-    opacity: 0.9;
+    transform: translate(30px, -30px) scale(1.07) rotate(-1deg);
+    opacity: 0.825;
+  }
+  75% {
+    transform: translate(-25px, -15px) scale(1.05) rotate(0.5deg);
+    opacity: 0.55;
   }
   100% {
-    transform: translateY(-10px) scale(1.02) rotate(-1deg);
-    opacity: 0.6;
+    transform: translate(15px, -5px) scale(1.02) rotate(-1deg);
+    opacity: 0.4;
   }
 }

@@ -5,22 +5,28 @@ import { topicButtoncss } from './topicButton.ctrl';
 export const TopicButton = () => {
   const ref = useRef<HTMLDivElement>(null);
   const chooseTopic = (str: Topic) => {
-    console.log('TopicButton.tsx:8 |str| : ', str);
     currentTopicSignal.value = str;
     topicButtoncss.get('wrap').set({
-      styling: '--gray',
+      start: '--gray',
       theming: '--gray',
       plugin: '--gray',
       errors: '--gray',
+      advanced: '--gray',
       [str]: '--white',
     });
   };
 
+
   return (
     <div ref={ref} className={topicButtoncss.wrap}>
-      <div onClick={() => chooseTopic('styling')} data-topic="styling">
+      <div onClick={() => chooseTopic('start')} data-topic="start">
+        <p>Quick</p>
         <p>Start</p>
-        <p>Styling</p>
+        <code>.ctrl.ts</code>
+      </div>
+      <div onClick={() => chooseTopic('advanced')} data-topic="advanced">
+        <p>More</p>
+        <p>Advanced</p>
         <code>.ctrl.ts</code>
       </div>
 

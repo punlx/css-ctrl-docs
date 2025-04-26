@@ -1,8 +1,8 @@
 import { signal, effect } from '@preact/signals-react';
 
-export type Topic = 'styling' | 'theming' | 'errors' | 'plugin';
+export type Topic = 'start' | 'advanced' | 'theming' | 'errors' | 'plugin';
 
-export const currentTopicSignal = signal<Topic>('styling');
+export const currentTopicSignal = signal<Topic>('start');
 let previousTopic: Topic;
 if (window.location.pathname === '') {
   previousTopic = currentTopicSignal.value;
