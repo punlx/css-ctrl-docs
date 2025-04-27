@@ -55,7 +55,7 @@ Error generating stack: `+e.message+`
     ai[center]
     bs[border-box]
     gp[46px]
-    screen(max-w[700px], fx-d[column])
+    screen(max-w[700px], fx-d[column] tx-a[center])
     lh[2]
     ls[0.02em]
 
@@ -247,7 +247,7 @@ Error generating stack: `+e.message+`
 
   .box {
     w[700px]
-    screen(max-w[700px], w[auto] pl[16px] pr[42px] bs[border-box])
+    screen(max-w[700px], w[auto] px[16px] bs[border-box])
     @use wrapper
     gp[42px]
     pb[120px]
