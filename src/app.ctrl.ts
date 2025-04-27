@@ -6,7 +6,7 @@ export const appcss = css<{ page: [] }>`
 
   .page {
 
-    @query [data-bold] {
+    > [data-bold] {
       ty[bold]
     }
   }

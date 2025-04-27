@@ -32,7 +32,7 @@ export const titlecss = css<{ wrap: []; title: [] }>`
       c[#9274f3]
     }
 
-    @query > p:first-child {
+    > p:first-child {
       ml[0]
     }
 

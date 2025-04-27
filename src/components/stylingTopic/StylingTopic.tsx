@@ -166,7 +166,7 @@ export const StylingTopic = () => {
           </em>
         </p>
       </div>
-      <Image draggable={false} width={700} src="/public/imgs/2.gif" alt="" />
+      <Image draggable={false} width={700} src="./imgs/2.gif" alt="" />
 
       {/* Get started */}
       <p data-bold>Get Started</p>
@@ -181,7 +181,7 @@ export const StylingTopic = () => {
         <em data-lib>utils.css.ts</em>, making <em data-lib>utils.ctrl.ts</em> ready for use in{' '}
         <em>your UI.</em>
       </p>
-      <Image draggable={false} width={700} src="/public/imgs/1.gif" alt="" />
+      <Image draggable={false} width={700} src="./imgs/1.gif" alt="" />
       <p>
         <em data-lib className="first-letter">
           css-ctrl
@@ -195,7 +195,7 @@ export const StylingTopic = () => {
 
       <div className="img-detail">
         <div>Compiled CSS</div>
-        <Image draggable={false} data-img-3 src="/public/imgs/3.png" alt="" data-desc="test" />
+        <Image draggable={false} data-img-3 src="./imgs/3.png" alt="" data-desc="test" />
       </div>
       <p>
         <em className="first-letter" data-lib>
@@ -214,10 +214,10 @@ export const StylingTopic = () => {
         <em data-lib>css-ctrl compiler</em>, which <em>generates types</em> and enables{' '}
         <em>class name suggestions.</em>
       </p>
-      <Image draggable={false} src="/public/imgs/4.gif" data-img-4 alt="" />
+      <Image draggable={false} src="./imgs/4.gif" data-img-4 alt="" />
       <div className="img-detail">
         <div>DOM</div>
-        <Image draggable={false} data-img-5 src="/public/imgs/5.png" alt="" />
+        <Image draggable={false} data-img-5 src="./imgs/5.png" alt="" />
       </div>
       <p data-bold>Dynamic Styling</p>
       <p>
@@ -234,7 +234,7 @@ export const StylingTopic = () => {
       </p>
       <div className="img-detail">
         <div>$properties</div>
-        <Image draggable={false} src="/public/imgs/6.gif" data-img-6 alt="" />
+        <Image draggable={false} src="./imgs/6.gif" data-img-6 alt="" />
       </div>
       <p>
         <span className="first-letter">When</span> you <em>save</em> the file, the{' '}
@@ -242,7 +242,7 @@ export const StylingTopic = () => {
         <em data-lib>.get</em> to <em>know</em> which <em data-lib>$properties</em> can be{' '}
         <em>set.</em>
       </p>
-      <Image draggable={false} src="/public/imgs/7.gif" data-img-7 alt="" />
+      <Image draggable={false} src="./imgs/7.gif" data-img-7 alt="" />
       <div className="img-detail">
         <div
           tabIndex={0}
@@ -266,9 +266,9 @@ export const StylingTopic = () => {
           UI
         </div>
         {!toggleImg8 ? (
-          <Image draggable={false} src="/public/imgs/8.png" data-img-7 alt="" />
+          <Image draggable={false} src="./imgs/8.png" data-img-7 alt="" />
         ) : (
-          <Image draggable={false} src="/public/imgs/8.1.png" data-img-7 alt="" />
+          <Image draggable={false} src="./imgs/8.1.png" data-img-7 alt="" />
         )}
       </div>
       <p>
@@ -278,7 +278,7 @@ export const StylingTopic = () => {
         below.
       </p>
 
-      <Image draggable={false} src="/public/imgs/9.png" data-img-7 alt="" />
+      <Image draggable={false} src="./imgs/9.png" data-img-7 alt="" />
       <p>
         <span className="first-letter">⚠️</span>
         <em>Avoid</em> using a <em data-lib>--&variable</em> name that <em>matches</em> a{' '}
@@ -290,7 +290,7 @@ export const StylingTopic = () => {
 
       <div className="img-detail">
         <div>Usage</div>
-        <Image draggable={false} src="/public/imgs/10.png" data-img-7 alt="" />
+        <Image draggable={false} src="./imgs/10.png" data-img-7 alt="" />
       </div>
       <div className="img-detail">
         <div
@@ -315,9 +315,9 @@ export const StylingTopic = () => {
           UI
         </div>
         {!toggleImg11 ? (
-          <Image draggable={false} src="/public/imgs/11.png" data-img-7 alt="" />
+          <Image draggable={false} src="./imgs/11.png" data-img-7 alt="" />
         ) : (
-          <Image draggable={false} src="/public/imgs/11.1.png" data-img-7 alt="" />
+          <Image draggable={false} src="./imgs/11.1.png" data-img-7 alt="" />
         )}
       </div>
       <p data-bold>Reset Dynamic Variables</p>
@@ -327,7 +327,7 @@ export const StylingTopic = () => {
         <em>reset</em> function can be used at <em>three different levels:</em> removes the
         corresponding <em>CSS variable</em> from the <em>root</em>.
       </p>
-      <Image draggable={false} src="/public/imgs/12.gif" alt="" />
+      <Image draggable={false} src="./imgs/12.gif" alt="" />
 
       <ul>
         <li>
