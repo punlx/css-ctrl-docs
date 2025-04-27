@@ -19,6 +19,9 @@
     <div id="root"></div>
   </body>
   <script>
+    if (location.pathname !== '/' && !location.pathname.startsWith('/css-ctrl-docs/')) {
+      sessionStorage.redirect = location.href;
+    }
     // 🌟 STARFIELD
     const starContainer = document.getElementById('star-overlay');
 
