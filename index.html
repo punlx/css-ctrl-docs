@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+    <script type="module" crossorigin src="/assets/index-DI1r-x_M.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Dg2cDKNY.css">
+  </head>
+  <body>
+    <div class="space-overlay">
+      <div class="aurora-overlay"></div>
+      <!-- 🌌 แสงเหนือ -->
+      <div class="star-overlay" id="star-overlay"></div>
+      <div class="shooting-star-overlay" id="shooting-star-overlay"></div>
+    </div>
+
+    <div id="root"></div>
+  </body>
+  <script>
+    // 🌟 STARFIELD
+    const starContainer = document.getElementById('star-overlay');
+
+    for (let i = 0; i < 120; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+
+      // Position
+      star.style.top = `${Math.random() * 100}vh`;
+      star.style.left = `${Math.random() * 100}vw`;
+
+      // Random star size
+      const size = Math.random() * 2 + 2;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+
+      // ---- ปรับวิธีใช้ random animation duration ----
+      // สุ่มระยะเวลา twinkle ให้อยู่ในช่วง 3 - 6 วินาที
+      const twinkleDuration = (Math.random() * 3 + 3).toFixed(2);
+      // เอาค่าไปใส่ใน animationDuration (multiple animations แยกด้วย ',')
+      // ตัวแรกคือ twinkle, ตัวที่สองคือ floatXY
+      star.style.animationDuration = `${twinkleDuration}s, 22s`;
+
+      // สำหรับ animation delay เดิม อาจคงไว้ หรือปรับได้ตามต้องการ
+      star.style.animationDelay = `${Math.random() * 8}s`;
+
+      // Color aura
+      const hue = Math.floor(Math.random() * 360);
+      const color = `hsl(${hue}, 100%, 85%)`;
+      star.style.background = color;
+
+      // ถ้าไม่อยาก blur ก็เอาออก (comment ไว้หรือเอาออก)
+      // star.style.filter = 'blur(1px)';
+
+      starContainer.appendChild(star);
+    }
+
+    // 🌠 SHOOTING STARS
+    const shootingContainer = document.getElementById('shooting-star-overlay');
+
+    function createShootingStar() {
+      const star = document.createElement('div');
+      star.className = 'shooting-star';
+
+      const startX = Math.random() * window.innerWidth * 0.8;
+      const startY = Math.random() * window.innerHeight * 0.4;
+
+      star.style.left = `${startX}px`;
+      star.style.top = `${startY}px`;
+
+      // ✅ Fixed: Keep star long enough after delay
+      const delay = Math.random() * 5; // seconds
+      star.style.animationDelay = `${delay}s`;
+
+      const duration = 4; // seconds
+      const totalLifetime = (delay + duration) * 1000;
+
+      shootingContainer.appendChild(star);
+
+      setTimeout(() => {
+        shootingContainer.removeChild(star);
+      }, totalLifetime);
+    }
+
+    // Launch shooting stars every 5–12 seconds
+    function scheduleShootingStar() {
+      createShootingStar();
+      const nextDelay = Math.random() * 7000 + 5000; // 5s - 12s
+      setTimeout(scheduleShootingStar, nextDelay);
+    }
+
+    scheduleShootingStar();
+  </script>
+</html>
