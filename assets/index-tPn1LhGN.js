@@ -459,6 +459,7 @@ ${d.join(`
 
     @query img {
       @use hoverBorder
+      screen(max-w[514px], bd[none] p[0])
     }
 
     @query [data-hoverborder] {
