@@ -827,10 +827,10 @@ cross-spawn@^7.0.6:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-css-ctrl@^0.3.6:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/css-ctrl/-/css-ctrl-0.3.6.tgz#9488616bd7770fce28dd79aecfda355de222ecec"
-  integrity sha512-Dffl0opT34rDQerminDj9XUckBxXS/qgO6w1udfBRtlR8sjROANhqfDXXp8Q+4o9vfAOSo2zO3aUsinAW1JVSg==
+css-ctrl@^0.3.7:
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/css-ctrl/-/css-ctrl-0.3.7.tgz#870b60dfca799bd67e1c8815157cf6495a8a95cb"
+  integrity sha512-nWVU1vwAv8dJTzw8HXn9oP1gCJaPmkKiFc6bz61/m1DfkTSkfYQDs4G9+6XOZocCFCH0WYhP3XS7eFZrRPwXYg==
 
 csstype@^3.0.2:
   version "3.1.3"

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { stylingTopiccss } from './stylingTopic.ctrl';
 import { popover } from 'css-ctrl/popover';
 import { utilscss } from './utils.ctrl';
+import { Image } from '../../shared/Image'; // 👉 เพิ่มตรงนี้
 
 const openNewTabPopover = popover({
   controls: 'open-new-tab',
@@ -165,7 +166,7 @@ export const StylingTopic = () => {
           </em>
         </p>
       </div>
-      <img draggable={false} width={700} src="/public/imgs/2.gif" alt="" />
+      <Image draggable={false} width={700} src="/public/imgs/2.gif" alt="" />
 
       {/* Get started */}
       <p data-bold>Get Started</p>
@@ -180,7 +181,7 @@ export const StylingTopic = () => {
         <em data-lib>utils.css.ts</em>, making <em data-lib>utils.ctrl.ts</em> ready for use in{' '}
         <em>your UI.</em>
       </p>
-      <img draggable={false} width={700} src="/public/imgs/1.gif" alt="" />
+      <Image draggable={false} width={700} src="/public/imgs/1.gif" alt="" />
       <p>
         <em data-lib className="first-letter">
           css-ctrl
@@ -194,30 +195,37 @@ export const StylingTopic = () => {
 
       <div className="img-detail">
         <div>Compiled CSS</div>
-        <img draggable={false} data-img-3 src="/public/imgs/3.png" alt="" data-desc="test" />
+        <Image draggable={false} data-img-3 src="/public/imgs/3.png" alt="" data-desc="test" />
       </div>
       <p>
-        <em data-lib>utils.ctrl.css</em> contains a <em>scope class name</em> generated from{' '}
-        <em data-lib>@scope utils</em>.
+        <em className="first-letter" data-lib>
+          utils.ctrl.css
+        </em>{' '}
+        contains a <em>scope class name</em> generated from <em data-lib>@scope utils</em>. You can{' '}
+        either set <em data-lib>@scope none</em> or omit <em data-lib>@scope</em> entirely to create{' '}
+        a <em>non-scoped</em> class. <em>However,</em> doing so will <em>disable</em> the{' '}
+        <em>ability</em> to use <em data-lib>dynamic CSS variables</em>
       </p>
 
       <p>
         <em className="first-letter">After</em> creating the <em data-lib>utils.ctrl.ts</em> file,
         you simply need to <em>import</em> it into <em>your UI</em> and use the <em>class names</em>{' '}
-        you have <em>defined</em> — with the help of the <em data-lib>css-ctrl compiler</em>, which{' '}
-        <em>generates types</em> and enables <em>class name suggestions.</em>
+        you have <em>defined</em> — with the <em>help</em> of the{' '}
+        <em data-lib>css-ctrl compiler</em>, which <em>generates types</em> and enables{' '}
+        <em>class name suggestions.</em>
       </p>
-      <img draggable={false} src="/public/imgs/4.gif" alt="" />
+      <Image draggable={false} src="/public/imgs/4.gif" data-img-4 alt="" />
       <div className="img-detail">
         <div>DOM</div>
-        <img draggable={false} data-img-5 src="/public/imgs/5.png" alt="" />
+        <Image draggable={false} data-img-5 src="/public/imgs/5.png" alt="" />
       </div>
       <p data-bold>Dynamic Styling</p>
       <p>
         <span className="first-letter">You</span> might have <em>noticed</em> that{' '}
-        <em data-lib>.get</em> was also <em>suggested along</em> with the <em>class names</em> you
-        created. This <em>allows</em> you to <em>access</em> the <em data-lib>$properties</em> and{' '}
-        <em data-lib>--&variables</em> of the <em>.box</em> class.
+        <em data-lib>.get</em> was also <em>suggested</em> along with the <em>class names</em> you{' '}
+        created. This <em>allows</em> you to <em>access</em> <em data-lib>dynamic CSS variables</em>
+        , which come in two types: <em data-lib>$properties</em> and <em data-lib>--&variables</em>{' '}
+        of the <em>.box</em> class.
       </p>
 
       <p>
@@ -225,15 +233,16 @@ export const StylingTopic = () => {
         <em data-lib>property</em> like below.
       </p>
       <div className="img-detail">
-        <div>$property</div>
-        <img draggable={false} src="/public/imgs/6.gif" data-img-6 alt="" />
+        <div>$properties</div>
+        <Image draggable={false} src="/public/imgs/6.gif" data-img-6 alt="" />
       </div>
       <p>
         <span className="first-letter">When</span> you <em>save</em> the file, the{' '}
         <em data-lib>css-ctrl compiler</em> will <em>automatically generate types,</em> allowing{' '}
-        <em data-lib>.get</em> to know which <em>$properties</em> can be set.
+        <em data-lib>.get</em> to <em>know</em> which <em data-lib>$properties</em> can be{' '}
+        <em>set.</em>
       </p>
-      <img draggable={false} src="/public/imgs/7.gif" data-img-7 alt="" />
+      <Image draggable={false} src="/public/imgs/7.gif" data-img-7 alt="" />
       <div className="img-detail">
         <div
           tabIndex={0}
@@ -251,24 +260,25 @@ export const StylingTopic = () => {
             }
           }}
         >
-          {!toggleImg8 ? 'Try onClick' : 'Undo'}
+          {!toggleImg8 ? 'Try onClick' : 'Reset'}
         </div>
         <div data-dom className={utilscss.box}>
           UI
         </div>
         {!toggleImg8 ? (
-          <img draggable={false} src="/public/imgs/8.png" data-img-7 alt="" />
+          <Image draggable={false} src="/public/imgs/8.png" data-img-7 alt="" />
         ) : (
-          <img draggable={false} src="/public/imgs/8.1.png" data-img-7 alt="" />
+          <Image draggable={false} src="/public/imgs/8.1.png" data-img-7 alt="" />
         )}
       </div>
       <p>
         <span className="first-letter">To</span> apply <em>dynamic variables</em>, simply add{' '}
-        <em data-lib>--&</em> in front of <em data-lib>scoped variables</em>. When you <em>save</em>
-        , the <em data-lib>css-ctrl compiler</em> will <em>generate types</em> as shown below.
+        <em data-lib>--&</em> in front of <em>Locally Scoped CSS Variables.</em> When you{' '}
+        <em>save</em>, the <em data-lib>css-ctrl compiler</em> will <em>generate types</em> as shown
+        below.
       </p>
 
-      <img draggable={false} src="/public/imgs/9.png" data-img-7 alt="" />
+      <Image draggable={false} src="/public/imgs/9.png" data-img-7 alt="" />
       <p>
         <span className="first-letter">⚠️</span>
         <em>Avoid</em> using a <em data-lib>--&variable</em> name that <em>matches</em> a{' '}
@@ -280,7 +290,7 @@ export const StylingTopic = () => {
 
       <div className="img-detail">
         <div>Usage</div>
-        <img draggable={false} src="/public/imgs/10.png" data-img-7 alt="" />
+        <Image draggable={false} src="/public/imgs/10.png" data-img-7 alt="" />
       </div>
       <div className="img-detail">
         <div
@@ -299,17 +309,61 @@ export const StylingTopic = () => {
             }
           }}
         >
-          {!toggleImg11 ? 'Try onClick' : 'Undo'}
+          {!toggleImg11 ? 'Try onClick' : 'Reset'}
         </div>
         <div data-dom className={utilscss.box2}>
           UI
         </div>
         {!toggleImg11 ? (
-          <img draggable={false} src="/public/imgs/11.png" data-img-7 alt="" />
+          <Image draggable={false} src="/public/imgs/11.png" data-img-7 alt="" />
         ) : (
-          <img draggable={false} src="/public/imgs/11.1.png" data-img-7 alt="" />
+          <Image draggable={false} src="/public/imgs/11.1.png" data-img-7 alt="" />
         )}
       </div>
+      <p data-bold>Reset Dynamic Variables</p>
+      <p>
+        <span className="first-letter">As</span> you <em>experienced</em> when trying{' '}
+        <em data-lib>Try onClick</em>, pressing <em data-lib>Reset</em> immediately The{' '}
+        <em>reset</em> function can be used at <em>three different levels:</em> removes the
+        corresponding <em>CSS variable</em> from the <em>root</em>.
+      </p>
+      <Image draggable={false} src="/public/imgs/12.gif" alt="" />
+
+      <ul>
+        <li>
+          <p>
+            <em>
+              <span className="const">utilscss</span>.reset<span className="brackets">()</span>
+            </em>{' '}
+            — resets all <em data-lib>dynamic CSS variables</em> inside <em data-lib>utilscss</em>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>
+              <span className="const">utilscss</span>.get<span className="brackets">(</span>
+              <span className="inside-text">"box"</span>
+              <span className="brackets">)</span>.reset
+              <span className="brackets">()</span>
+            </em>{' '}
+            — resets all <em data-lib>dynamic CSS variables</em> scoped to the <em>.box</em> class.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>
+              <span className="const">utilscss</span>.get<span className="brackets">(</span>
+              <span className="inside-text">"box"</span>
+              <span className="brackets">)</span>.reset
+              <span className="brackets">(</span>[<span className="inside-text">"bg"</span>]
+              <span className="brackets">)</span>
+            </em>{' '}
+            — resets only specific <em data-lib>dynamic variables</em> like{' '}
+            <em data-lib>$properties</em> or <em data-lib>--&variables</em> inside the <em>.box</em>{' '}
+            class.
+          </p>
+        </li>
+      </ul>
       <p data-bold>⚡ High Performance</p>
       <p>
         <em data-lib className="first-letter">
@@ -325,14 +379,19 @@ export const StylingTopic = () => {
         <em>batching</em> and <em>applying</em> thousands of <em>CSS variable changes</em> within a{' '}
         <em>single frame,</em> without any noticeable impact on <em>performance</em>.
       </p>
-      <p data-bold>ℹ️ Zero-Runtime CSS-in-JS</p>
+      <p data-bold>💡 Zero-Runtime CSS-in-JS</p>
 
       <p>
-        <span className="first-letter">Traditional</span> <em>zero-runtime CSS-in-JS</em> libraries
+        <span className="first-letter">Traditional</span> <em>zero-runtime CSS-in-JS</em> libraries{' '}
         generate <em>static CSS</em> at <em>build time,</em> offering <em>fast load times</em> but{' '}
-        <em>limited dynamic styling</em>. In contrast, <em data-lib>css-ctrl</em> enables{' '}
+        providing <em>less runtime flexibility</em> for dynamic styling. They often require{' '}
+        precompiling <em>static variables</em>, which can restrict certain dynamic use cases.
+      </p>
+      <p>
+        <span className="first-letter">In</span> contrast, <em data-lib>css-ctrl</em> enables{' '}
         <em>true runtime flexibility</em> by using <em>CSS Variables</em> — allowing thousands of{' '}
-        <em>dynamic updates</em> without injecting new styles or impacting <em>performance</em>.
+        <em>dynamic updates</em> without <em>injecting</em> new styles or impacting{' '}
+        <em>performance</em>.
       </p>
     </div>
   );

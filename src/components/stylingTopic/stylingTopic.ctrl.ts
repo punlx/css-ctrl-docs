@@ -34,8 +34,38 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
     gp[42px]
     pb[120px]
 
+    > ul {
+      p[0]
+      m[0]
+      lh[2]
+      ls[0.02em]
+      d[flex]
+      fx-d[column]
+      gp[14px]
+
+      > em {
+        fst[normal]!
+
+        > span.inside-text {
+          c[#ff6969]
+        }
+
+        > span.brackets {
+          c[#9688ff]
+        }
+
+        > span.const {
+          c[#afa5ff]
+        }
+      }
+    }
+
     > [data-lib-text] {
       tx-w[nowrap]
+    }
+
+    > [data-img-4] {
+      w[620px]
     }
 
     > .first-letter {
@@ -103,18 +133,18 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
     }
 
     > img[data-img-3] {
-      w[450px]
+      w[430px]
       screen(max-w[700px], w[100%])
     }
 
     > img[data-img-5] {
-      w[500px]
+      w[470px]
       screen(max-w[700px], w[100%])
     }
 
     > p {
       lh[2]
-      ls[0.02em]
+      0.02em0.02em]
       tx-a[justify]
     }
 
