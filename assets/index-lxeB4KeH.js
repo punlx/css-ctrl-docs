@@ -535,6 +535,10 @@ ${d.join(`
         w[700px]
       }
 
+      > &[alt='3-3'] {
+        w[680px]
+      }
+
       > &[alt='3-4'] {
         w[600px]
       }
@@ -544,7 +548,7 @@ ${d.join(`
       }
     }
   }
-`,pv=()=>c.jsxs("div",{className:`${Rf.box} ${gv.wrapper}`,children:[c.jsx("p",{"data-bold":!0,children:"Class Binding"}),c.jsx("p",{children:"When you want a single element to have multiple classes, you can still use the traditional method, as shown below:"}),c.jsx(ll,{draggable:!1,src:"/imgs/3-1.png",alt:"3-1"}),c.jsx(ll,{draggable:!1,src:"/imgs/3-2.png",alt:"3-2"}),c.jsxs("p",{children:[c.jsx("em",{className:"lib",children:"css-ctrl"})," provides the ",c.jsx("em",{className:"lib",children:"@bind"})," syntax, eliminating the need for traditional methods and making your code much cleaner."]}),c.jsx(ll,{draggable:!1,src:"/imgs/3-3.png",alt:"3-2"}),c.jsx(ll,{draggable:!1,src:"/imgs/3-4.png",alt:"3-4"}),c.jsx("p",{children:"The resulting DOM output will be the same."}),c.jsx(ll,{draggable:!1,src:"/imgs/3-5.png",alt:"3-5"})]}),bv=xe`
+`,pv=()=>c.jsxs("div",{className:`${Rf.box} ${gv.wrapper}`,children:[c.jsx("p",{"data-bold":!0,children:"Class Binding"}),c.jsxs("p",{children:[c.jsx("em",{children:"css-ctrl"})," introduces ",c.jsx("em",{children:"@bind"}),", allowing you to group multiple classes into a single mapping. This makes it easier to manage and apply related classes in your UI."]}),c.jsx("p",{children:"Traditionally, if you wanted a single element to have multiple classes, you would manually combine them, as shown below:"}),c.jsx(ll,{draggable:!1,src:"/imgs/3-1.png",alt:"3-1"}),c.jsx(ll,{draggable:!1,src:"/imgs/3-2.png",alt:"3-2"}),c.jsxs("p",{children:[c.jsx("em",{children:"css-ctrl"})," simplifies this process with the ",c.jsx("em",{children:"@bind"})," syntax, eliminating the need for manual combination and making your code much cleaner."]}),c.jsx(ll,{draggable:!1,src:"/imgs/3-3.png",alt:"3-3"}),c.jsx(ll,{draggable:!1,src:"/imgs/3-4.png",alt:"3-4"}),c.jsx("p",{children:"Both approaches produce the same DOM output."}),c.jsx(ll,{draggable:!1,src:"/imgs/3-5.png",alt:"3-5"}),c.jsx("p",{"data-bold":!0,children:"Reusable Styling"}),c.jsxs("p",{children:[c.jsx("em",{children:"css-ctrl"})," provides ",c.jsx("em",{children:"@const"})," and ",c.jsx("em",{children:"@use"})," to make your styles reusable and maintainable. Define common styles once using ",c.jsx("em",{children:"@const"}),", and apply them across multiple classes with ",c.jsx("em",{children:"@use"}),"."]})]}),bv=xe`
   @scope advanced
 
   .wrapper {
