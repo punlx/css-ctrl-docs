@@ -1,12 +1,13 @@
 import { titlecss } from './title.ctrl';
+import { Image } from '../../shared/Image';
 
 export const Title = () => {
   return (
     <div className={titlecss.wrap}>
-      <img draggable={false} src="public/iconfull.png" alt="" />
+      <Image draggable={false} src="/imgs/iconfull.png" alt="" />
       <div className={titlecss.title}>
         <p data-blue>Zero-Runtime</p>
-        <p data-white>CSS + JS</p>
+        <p data-white>CSS + TS</p>
         <p>built for</p>
         <p data-blue>Fast Styling,</p>
         <p data-white>Dynamic Styling</p>

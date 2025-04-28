@@ -108,7 +108,8 @@ export const StylingTopic = () => {
 
         <div data-install-lib>
           <p data-bold data-lib-text style={{ color: '#c3b3f5' }}>
-            VSCode Extension Installation
+            <span>VSCode Extension</span>
+            <span>Installation</span>
           </p>
         </div>
         <p
@@ -135,7 +136,7 @@ export const StylingTopic = () => {
         <p data-bold className="allset">
           🎉 You're all set!
         </p>
-        <p data-thin>
+        <p data-thin style={{ textAlign: 'center' }}>
           <em>No</em> additional <em>setup</em> or <em>config</em> needed — you're{' '}
           <em>ready to go!</em>
         </p>
@@ -166,7 +167,7 @@ export const StylingTopic = () => {
           </em>
         </p>
       </div>
-      <Image draggable={false} width={700} src="./imgs/2.gif" alt="" />
+      <Image draggable={false} width={700} src="/imgs/2.gif" alt="" />
 
       {/* Get started */}
       <p data-bold>Get Started</p>
@@ -181,7 +182,7 @@ export const StylingTopic = () => {
         <em data-lib>utils.css.ts</em>, making <em data-lib>utils.ctrl.ts</em> ready for use in{' '}
         <em>your UI.</em>
       </p>
-      <Image draggable={false} width={700} src="./imgs/1.gif" alt="" />
+      <Image draggable={false} width={700} src="/imgs/1.gif" alt="" />
       <p>
         <em data-lib className="first-letter">
           css-ctrl
@@ -195,7 +196,7 @@ export const StylingTopic = () => {
 
       <div className="img-detail">
         <div>Compiled CSS</div>
-        <Image draggable={false} data-img-3 src="./imgs/3.png" alt="" data-desc="test" />
+        <Image draggable={false} data-img-3 src="/imgs/3.png" alt="" data-desc="test" />
       </div>
       <p>
         <em className="first-letter" data-lib>
@@ -204,7 +205,7 @@ export const StylingTopic = () => {
         contains a <em>scope class name</em> generated from <em data-lib>@scope utils</em>. You can{' '}
         either set <em data-lib>@scope none</em> or omit <em data-lib>@scope</em> entirely to create{' '}
         a <em>non-scoped</em> class. <em>However,</em> doing so will <em>disable</em> the{' '}
-        <em>ability</em> to use <em data-lib>dynamic CSS variables</em>
+        <em>ability</em> to use <em>dynamic CSS variables</em>
       </p>
 
       <p>
@@ -214,18 +215,18 @@ export const StylingTopic = () => {
         <em data-lib>css-ctrl compiler</em>, which <em>generates types</em> and enables{' '}
         <em>class name suggestions.</em>
       </p>
-      <Image draggable={false} src="./imgs/4.gif" data-img-4 alt="" />
+      <Image draggable={false} src="/imgs/4.gif" data-img-4 alt="" />
       <div className="img-detail">
         <div>DOM</div>
-        <Image draggable={false} data-img-5 src="./imgs/5.png" alt="" />
+        <Image draggable={false} data-img-5 src="/imgs/5.png" alt="" />
       </div>
       <p data-bold>Dynamic Styling</p>
       <p>
         <span className="first-letter">You</span> might have <em>noticed</em> that{' '}
         <em data-lib>.get</em> was also <em>suggested</em> along with the <em>class names</em> you{' '}
-        created. This <em>allows</em> you to <em>access</em> <em data-lib>dynamic CSS variables</em>
-        , which come in two types: <em data-lib>$properties</em> and <em data-lib>--&variables</em>{' '}
-        of the <em>.box</em> class.
+        created. This <em>allows</em> you to <em>access</em> <em>dynamic CSS variables</em>, which
+        come in two types: <em data-lib>$properties</em> and <em data-lib>--&variables</em> of the{' '}
+        <em>.box</em> class.
       </p>
 
       <p>
@@ -234,7 +235,7 @@ export const StylingTopic = () => {
       </p>
       <div className="img-detail">
         <div>$properties</div>
-        <Image draggable={false} src="./imgs/6.gif" data-img-6 alt="" />
+        <Image draggable={false} src="/imgs/6.gif" data-img-6 alt="" />
       </div>
       <p>
         <span className="first-letter">When</span> you <em>save</em> the file, the{' '}
@@ -242,7 +243,7 @@ export const StylingTopic = () => {
         <em data-lib>.get</em> to <em>know</em> which <em data-lib>$properties</em> can be{' '}
         <em>set.</em>
       </p>
-      <Image draggable={false} src="./imgs/7.gif" data-img-7 alt="" />
+      <Image draggable={false} src="/imgs/7.gif" data-img-7 alt="" />
       <div className="img-detail">
         <div
           tabIndex={0}
@@ -266,9 +267,9 @@ export const StylingTopic = () => {
           UI
         </div>
         {!toggleImg8 ? (
-          <Image draggable={false} src="./imgs/8.png" data-img-7 alt="" />
+          <Image draggable={false} src="/imgs/8.png" data-img-7 alt="" />
         ) : (
-          <Image draggable={false} src="./imgs/8.1.png" data-img-7 alt="" />
+          <Image draggable={false} src="/imgs/8.1.png" data-img-7 alt="" />
         )}
       </div>
       <p>
@@ -278,7 +279,7 @@ export const StylingTopic = () => {
         below.
       </p>
 
-      <Image draggable={false} src="./imgs/9.png" data-img-7 alt="" />
+      <Image draggable={false} src="/imgs/9.png" data-img-7 alt="" />
       <p>
         <span className="first-letter">⚠️</span>
         <em>Avoid</em> using a <em data-lib>--&variable</em> name that <em>matches</em> a{' '}
@@ -290,7 +291,7 @@ export const StylingTopic = () => {
 
       <div className="img-detail">
         <div>Usage</div>
-        <Image draggable={false} src="./imgs/10.png" data-img-7 alt="" />
+        <Image draggable={false} src="/imgs/10.png" data-img-7 alt="" />
       </div>
       <div className="img-detail">
         <div
@@ -315,19 +316,19 @@ export const StylingTopic = () => {
           UI
         </div>
         {!toggleImg11 ? (
-          <Image draggable={false} src="./imgs/11.png" data-img-7 alt="" />
+          <Image draggable={false} src="/imgs/11.png" data-img-7 alt="" />
         ) : (
-          <Image draggable={false} src="./imgs/11.1.png" data-img-7 alt="" />
+          <Image draggable={false} src="/imgs/11.1.png" data-img-7 alt="" />
         )}
       </div>
-      <p data-bold>Reset Dynamic Variables</p>
+      <p data-bold>Reset Variables</p>
       <p>
         <span className="first-letter">As</span> you <em>experienced</em> when trying{' '}
         <em data-lib>Try onClick</em>, pressing <em data-lib>Reset</em> immediately The{' '}
         <em>reset</em> function can be used at <em>three different levels:</em> removes the
         corresponding <em>CSS variable</em> from the <em>root</em>.
       </p>
-      <Image draggable={false} src="./imgs/12.gif" alt="" />
+      <Image draggable={false} src="/imgs/12.gif" alt="" />
 
       <ul>
         <li>
@@ -335,7 +336,7 @@ export const StylingTopic = () => {
             <em>
               <span className="const">utilscss</span>.reset<span className="brackets">()</span>
             </em>{' '}
-            — resets all <em data-lib>dynamic CSS variables</em> inside <em data-lib>utilscss</em>.
+            — resets all <em>dynamic CSS variables</em> inside <em data-lib>utilscss</em>.
           </p>
         </li>
         <li>
@@ -346,7 +347,7 @@ export const StylingTopic = () => {
               <span className="brackets">)</span>.reset
               <span className="brackets">()</span>
             </em>{' '}
-            — resets all <em data-lib>dynamic CSS variables</em> scoped to the <em>.box</em> class.
+            — resets all <em>dynamic CSS variables</em> scoped to the <em>.box</em> class.
           </p>
         </li>
         <li>
@@ -358,13 +359,12 @@ export const StylingTopic = () => {
               <span className="brackets">(</span>[<span className="inside-text">"bg"</span>]
               <span className="brackets">)</span>
             </em>{' '}
-            — resets only specific <em data-lib>dynamic variables</em> like{' '}
-            <em data-lib>$properties</em> or <em data-lib>--&variables</em> inside the <em>.box</em>{' '}
-            class.
+            — resets only specific <em>dynamic variables</em> like <em data-lib>$properties</em> or{' '}
+            <em data-lib>--&variables</em> inside the <em>.box</em> class.
           </p>
         </li>
       </ul>
-      <p data-bold>⚡ High Performance</p>
+      <p data-bold>⚡Performance</p>
       <p>
         <em data-lib className="first-letter">
           css-ctrl
@@ -379,7 +379,10 @@ export const StylingTopic = () => {
         <em>batching</em> and <em>applying</em> thousands of <em>CSS variable changes</em> within a{' '}
         <em>single frame,</em> without any noticeable impact on <em>performance</em>.
       </p>
-      <p data-bold>💡 Zero-Runtime CSS-in-JS</p>
+      <p data-bold className="zero-runtime-css-in-js">
+        <span>Zero-Runtime</span>
+        <span>CSS-in-JS</span>
+      </p>
 
       <p>
         <span className="first-letter">Traditional</span> <em>zero-runtime CSS-in-JS</em> libraries{' '}
@@ -392,6 +395,12 @@ export const StylingTopic = () => {
         <em>true runtime flexibility</em> by using <em>CSS Variables</em> — allowing thousands of{' '}
         <em>dynamic updates</em> without <em>injecting</em> new styles or impacting{' '}
         <em>performance</em>.
+      </p>
+      <p data-bold>Summary</p>
+      <p>
+        <span className="first-letter">With</span> <em data-lib>css-ctrl</em>, you get the best of
+        both worlds — true runtime flexibility and zero-runtime performance — unlocking a powerful,
+        efficient, and intuitive styling experience.
       </p>
     </div>
   );

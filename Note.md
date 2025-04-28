@@ -32,3 +32,7 @@ export default function Home() {
 ```
 
 ---
+  > screen(max-w[700px]) {
+        bg[red]
+        
+      }

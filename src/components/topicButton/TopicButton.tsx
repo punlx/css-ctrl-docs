@@ -9,13 +9,12 @@ export const TopicButton = () => {
     topicButtoncss.get('wrap').set({
       start: '--gray',
       theming: '--gray',
-      plugin: '--gray',
+      utilities: '--gray',
       errors: '--gray',
-      advanced: '--gray',
+      styling: '--gray',
       [str]: '--white',
     });
   };
-
 
   return (
     <div ref={ref} className={topicButtoncss.wrap}>
@@ -24,9 +23,15 @@ export const TopicButton = () => {
         <p>Start</p>
         <code>.ctrl.ts</code>
       </div>
-      <div onClick={() => chooseTopic('advanced')} data-topic="advanced">
+      <div onClick={() => chooseTopic('styling')} data-topic="styling">
         <p>More</p>
-        <p>Advanced</p>
+        <p>Styling</p>
+        <code>.ctrl.ts</code>
+      </div>
+
+      <div onClick={() => chooseTopic('utilities')} data-topic="utilities">
+        <p>Styling</p>
+        <p>Utilities</p>
         <code>.ctrl.ts</code>
       </div>
 
@@ -34,12 +39,6 @@ export const TopicButton = () => {
         <p>Create</p>
         <p>Design System</p>
         <code>ctrl.theme.ts</code>
-      </div>
-
-      <div onClick={() => chooseTopic('plugin')} data-topic="plugin">
-        <p>UI</p>
-        <p>Interaction</p>
-        <code>Plugins</code>
       </div>
 
       <div onClick={() => chooseTopic('errors')} data-topic="errors">

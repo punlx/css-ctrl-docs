@@ -19,7 +19,9 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
   }
 
   .copyPopover {
-    popover-container(bg[#222222] br[12px] c[#a8a8a8])
+    popover-container(
+      bg[#222222] br[12px] c[#a8a8a8]
+    )
     p[12px]
   }
 
@@ -29,10 +31,25 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
 
   .box {
     w[700px]
-    screen(max-w[700px], w[auto])
+    screen(
+      max-w[700px],
+      w[auto]
+      px[16px]
+      bs[border-box]
+    )
     @use wrapper
     gp[42px]
     pb[120px]
+
+    > .zero-runtime-css-in-js {
+      d[flex]
+      gp[10px]
+      screen(
+        max-w[700px],
+        fx-d[column]
+        ai[center]
+      )
+    }
 
     > ul {
       p[0]
@@ -61,7 +78,15 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
     }
 
     > [data-lib-text] {
-      tx-w[nowrap]
+      d[flex]
+      gp[6px]
+      fx-w[wrap]
+      jc[center]
+      screen(
+        max-w[514px],
+        fx-d[column]
+        ai[center]
+      )
     }
 
     > [data-img-4] {
@@ -101,10 +126,14 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
         cs[pointer]
         ps[absolute]
         z[2]
-        hover(bg[#795eff])
+        hover(
+          bg[#795eff]
+        )
         ts[0.25s ease]
         us[none]
-        active(bg[#ab9bff])
+        active(
+          bg[#ab9bff]
+        )
       }
     }
 
@@ -121,7 +150,10 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
 
     > img {
       w[700px]
-      screen(max-w[700px], w[100%])
+      d[block]
+      screen(
+        max-w[700px],  max-w[100%] h[auto]
+      )
     }
 
     > [data-img-6] {
@@ -134,17 +166,21 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
 
     > img[data-img-3] {
       w[430px]
-      screen(max-w[700px], w[100%])
+      screen(
+        max-w[700px], w[100%]
+      )
     }
 
     > img[data-img-5] {
       w[470px]
-      screen(max-w[700px], w[100%])
+      screen(
+        max-w[700px], w[100%]
+      )
     }
 
     > p {
       lh[2]
-      0.02em0.02em]
+      ls[0.02em]
       tx-a[justify]
     }
 
@@ -166,6 +202,12 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
       p[100px]!
       br[16px]
       gp[24px]
+      bs[border-box]
+      screen(
+        max-w[700px],
+        p[0]!
+        bd[none]!
+      )
     }
 
     > [data-install-lib] {
@@ -184,11 +226,15 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
     }
 
     > [data-install-lib-txt] {
-      hover(bg[#303030] c[wheat])
+      hover(
+        bg[#303030] c[wheat]
+      )
     }
 
     > [data-install-ext] {
-      hover(bg[#303030] c[#c3b3f5])
+      hover(
+        bg[#303030] c[#c3b3f5]
+      )
     }
 
     > [data-wrapper] {

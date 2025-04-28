@@ -11,7 +11,13 @@ export const titlecss = css<{ wrap: []; title: [] }>`
     ai[center]
     bs[border-box]
     gp[46px]
-    screen(max-w[700px],fx-d[column])
+    screen(
+      max-w[700px],
+      fx-d[column]
+      tx-a[center]
+    )
+    lh[2]
+    ls[0.02em]
 
     @query img {
       us[none]
@@ -25,10 +31,18 @@ export const titlecss = css<{ wrap: []; title: [] }>`
   .title {
     c[white]
     fs[26px]
+    screen(
+      max-w[700px],
+      fs[16px]
+    )
 
     @query [data-blue] {
       fm[Poppins-Bold]
       fs[36px]
+      screen(
+        max-w[700px],
+        fs[24px]
+      )
       c[#9274f3]
     }
 
@@ -40,11 +54,19 @@ export const titlecss = css<{ wrap: []; title: [] }>`
       fm[Poppins-Bold]
       fs[36px]
       c[#ffffff]
+      screen(
+        max-w[700px],
+        fs[24px]
+      )
     }
 
     @query [data-orange] {
       fs[32px]
       c[#ffffbe]
+      screen(
+        max-w[700px],
+        fs[24px]
+      )
     }
 
     @query * {

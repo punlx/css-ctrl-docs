@@ -4,10 +4,13 @@
   align-items: center;
   box-sizing: border-box;
   gap: 46px;
+  line-height: 2;
+  letter-spacing: 0.02em;
 }
 @media only screen and (max-width: 700px) {
   .title_wrap {
     flex-direction: column;
+    text-align: center;
   }
 }
 .title_wrap img {
@@ -21,10 +24,20 @@
   color: white;
   font-size: 26px;
 }
+@media only screen and (max-width: 700px) {
+  .title_title {
+    font-size: 16px;
+  }
+}
 .title_title [data-blue] {
   font-family: Poppins-Bold;
   font-size: 36px;
   color: #9274f3;
+}
+@media only screen and (max-width: 700px) {
+  .title_title [data-blue] {
+    font-size: 24px;
+  }
 }
 .title_title p:first-child {
   margin-left: 0;
@@ -34,9 +47,19 @@
   font-size: 36px;
   color: #ffffff;
 }
+@media only screen and (max-width: 700px) {
+  .title_title [data-white] {
+    font-size: 24px;
+  }
+}
 .title_title [data-orange] {
   font-size: 32px;
   color: #ffffbe;
+}
+@media only screen and (max-width: 700px) {
+  .title_title [data-orange] {
+    font-size: 24px;
+  }
 }
 .title_title * {
   margin-left: 12px;

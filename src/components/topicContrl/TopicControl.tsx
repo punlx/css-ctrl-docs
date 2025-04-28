@@ -5,7 +5,8 @@ import { ErrorTopic } from '../errorTopic/ErrorTopic';
 import { StylingTopic } from '../stylingTopic/StylingTopic';
 import { ThemeTopic } from '../themeTopic/ThemeTopic';
 import { utilscss } from '../utils.ctrl';
-import { PluginTopic } from '../pluginTopic/PluginTopic';
+import { UtilitiesTopic } from '../pluginTopic/utilitiesTopic';
+import { Advanced } from '../advancedTopic/Advanced';
 
 interface WrapperProps {
   children: React.ReactNode;
@@ -31,8 +32,12 @@ export const TopicControl = () => {
           <StylingTopic></StylingTopic>
         </Wrapper>
       );
-    case 'advanced':
-      return <Wrapper>advanced</Wrapper>;
+    case 'styling':
+      return (
+        <Wrapper>
+          <Advanced></Advanced>
+        </Wrapper>
+      );
     case 'theming':
       return (
         <Wrapper>
@@ -47,10 +52,10 @@ export const TopicControl = () => {
         </Wrapper>
       );
 
-    case 'plugin':
+    case 'utilities':
       return (
         <Wrapper>
-          <PluginTopic></PluginTopic>
+          <UtilitiesTopic></UtilitiesTopic>
         </Wrapper>
       );
   }

@@ -1,9 +1,9 @@
 :root {
   --start-topicButton_wrap: var(--gray);
   --theming-topicButton_wrap: var(--gray);
-  --plugin-topicButton_wrap: var(--gray);
+  --utilities-topicButton_wrap: var(--gray);
   --errors-topicButton_wrap: var(--gray);
-  --advanced-topicButton_wrap: var(--gray);
+  --styling-topicButton_wrap: var(--gray);
 }
 .topicButton_wrap {
   display: flex;
@@ -46,13 +46,13 @@
   border-radius: 12px;
   font-size: 18px;
 }
-.topicButton_wrap [data-topic="advanced"] {
-  border-color: var(--advanced-topicButton_wrap);
+.topicButton_wrap [data-topic="styling"] {
+  border-color: var(--styling-topicButton_wrap);
 }
-.topicButton_wrap [data-topic="advanced"] p:nth-child(2) {
+.topicButton_wrap [data-topic="styling"] p:nth-child(2) {
   color: #ffffff;
 }
-.topicButton_wrap [data-topic="advanced"] code {
+.topicButton_wrap [data-topic="styling"] code {
   --color: white;
   --bg: #3535f9;
   background-color: var(--bg);
@@ -91,13 +91,13 @@
   border-radius: 12px;
   font-size: 18px;
 }
-.topicButton_wrap [data-topic="plugin"] {
-  border-color: var(--plugin-topicButton_wrap);
+.topicButton_wrap [data-topic="utilities"] {
+  border-color: var(--utilities-topicButton_wrap);
 }
-.topicButton_wrap [data-topic="plugin"] p:nth-child(2) {
+.topicButton_wrap [data-topic="utilities"] p:nth-child(2) {
   color: white;
 }
-.topicButton_wrap [data-topic="plugin"] code {
+.topicButton_wrap [data-topic="utilities"] code {
   --color: white;
   --bg: #3535f9;
   background-color: var(--bg);

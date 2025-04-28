@@ -2,7 +2,7 @@ import './topicButton.ctrl.css';
 import { css } from 'css-ctrl';
 
 // css-ctrl mode:base
-export const topicButtoncss = css<{ wrap: ['start', 'theming', 'plugin', 'errors', 'advanced'] }>`
+export const topicButtoncss = css<{ wrap: ['start', 'theming', 'utilities', 'errors', 'styling'] }>`
   @scope topicButton
 
   @const code {
@@ -16,9 +16,9 @@ export const topicButtoncss = css<{ wrap: ['start', 'theming', 'plugin', 'errors
   .wrap {
     --&start[--gray]
     --&theming[--gray]
-    --&plugin[--gray]
+    --&utilities[--gray]
     --&errors[--gray]
-    --&advanced[--gray]
+    --&styling[--gray]
     d[flex]
     gp[12px]
     c[--gray]
@@ -35,8 +35,12 @@ export const topicButtoncss = css<{ wrap: ['start', 'theming', 'plugin', 'errors
       px[16px]
       py[12px]
       ts[0.25s ease]
-      hover(bd[2px solid #c6c4d3])
-      before(bd[--gray])
+      hover(
+        bd[2px solid #c6c4d3]
+      )
+      before(
+        bd[--gray]
+      )
       cs[pointer]
     }
 
@@ -54,8 +58,8 @@ export const topicButtoncss = css<{ wrap: ['start', 'theming', 'plugin', 'errors
       }
     }
 
-    @query [data-topic="advanced"] {
-      bd-c[--&advanced]
+    @query [data-topic="styling"] {
+      bd-c[--&styling]
 
       @query p:nth-child(2) {
         c[#ffffff]
@@ -96,8 +100,8 @@ export const topicButtoncss = css<{ wrap: ['start', 'theming', 'plugin', 'errors
       }
     }
 
-    @query [data-topic="plugin"] {
-      bd-c[--&plugin]
+    @query [data-topic="utilities"] {
+      bd-c[--&utilities]
 
       @query p:nth-child(2) {
         c[white]

@@ -1,1 +1,4 @@
-html.base{--gray:#6b6779;--white:#c6c4d3;}
+html.base {
+  --gray: #6b6779;
+  --white: #c6c4d3;
+}
