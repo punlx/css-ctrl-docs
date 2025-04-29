@@ -160,6 +160,9 @@ Error generating stack: `+t.message+`
       px[16px]
       py[12px]
       ts[0.25s ease]
+      active(
+        bg[rgb(255,255,255,0.4)]
+      )
       hover(
         bd[2px solid #c6c4d3]
       )
@@ -239,7 +242,7 @@ Error generating stack: `+t.message+`
       }
     }
   }
-`,f0=()=>{const s=Ae.useRef(null),o=m=>{ih.value=m,Vd.get("wrap").set({start:"--gray",theming:"--gray",utilities:"--gray",errors:"--gray",styling:"--gray",[m]:"--white"})};return i.jsxs("div",{ref:s,className:Vd.wrap,children:[i.jsxs("div",{onClick:()=>o("start"),"data-topic":"start",children:[i.jsx("p",{children:"Quick"}),i.jsx("p",{children:"Start"}),i.jsx("code",{children:".ctrl.ts"})]}),i.jsxs("div",{onClick:()=>o("styling"),"data-topic":"styling",children:[i.jsx("p",{children:"More"}),i.jsx("p",{children:"Styling"}),i.jsx("code",{children:".ctrl.ts"})]}),i.jsxs("div",{onClick:()=>o("utilities"),"data-topic":"utilities",children:[i.jsx("p",{children:"Styling"}),i.jsx("p",{children:"Utilities"}),i.jsx("code",{children:".ctrl.ts"})]}),i.jsxs("div",{onClick:()=>o("theming"),"data-topic":"theming",children:[i.jsx("p",{children:"Create"}),i.jsx("p",{children:"Design System"}),i.jsx("code",{children:"ctrl.theme.ts"})]}),i.jsxs("div",{onClick:()=>o("errors"),"data-topic":"errors",children:[i.jsx("p",{children:"Rules"}),i.jsx("p",{children:"and"}),i.jsx("code",{children:"Errors"})]})]})},s0=()=>i.jsx("div",{children:"ErrorTopic"}),xt=$e`
+`,f0=()=>{const s=Ae.useRef(null),o=m=>{ih.value=m,Vd.get("wrap").set({start:"--gray",theming:"--gray",utilities:"--gray",errors:"--gray",styling:"--gray",[m]:"--white"})};return i.jsxs("div",{ref:s,className:Vd.wrap,children:[i.jsxs("div",{tabIndex:0,onClick:()=>o("start"),"data-topic":"start",children:[i.jsx("p",{children:"Quick"}),i.jsx("p",{children:"Start"}),i.jsx("code",{children:".ctrl.ts"})]}),i.jsxs("div",{tabIndex:0,onClick:()=>o("styling"),"data-topic":"styling",children:[i.jsx("p",{children:"More"}),i.jsx("p",{children:"Styling"}),i.jsx("code",{children:".ctrl.ts"})]}),i.jsxs("div",{tabIndex:0,onClick:()=>o("utilities"),"data-topic":"utilities",children:[i.jsx("p",{children:"Styling"}),i.jsx("p",{children:"Utilities"}),i.jsx("code",{children:".ctrl.ts"})]}),i.jsxs("div",{tabIndex:0,onClick:()=>o("theming"),"data-topic":"theming",children:[i.jsx("p",{children:"Create"}),i.jsx("p",{children:"Design System"}),i.jsx("code",{children:"ctrl.theme.ts"})]}),i.jsxs("div",{tabIndex:0,onClick:()=>o("errors"),"data-topic":"errors",children:[i.jsx("p",{children:"Rules"}),i.jsx("p",{children:"and"}),i.jsx("code",{children:"Errors"})]})]})},s0=()=>i.jsx("div",{children:"ErrorTopic"}),xt=$e`
   @scope stylingTopic
 
   @const badge {
