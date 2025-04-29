@@ -25,6 +25,9 @@
   transition: 0.25s ease;
   cursor: pointer;
 }
+.topicButton_wrap [data-topic]:active {
+  background-color: rgb(255, 255, 255, 0.4);
+}
 .topicButton_wrap [data-topic]:hover {
   border: 2px solid #c6c4d3;
 }

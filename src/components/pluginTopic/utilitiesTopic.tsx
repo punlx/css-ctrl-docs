@@ -31,6 +31,13 @@ export const UtilitiesTopic = () => {
         <span className="fl">Both</span> approaches produce the same DOM output.
       </p>
       <Image draggable={false} src="/imgs/3-5.png" alt="3-5" />
+      <p>
+        If you use <em>@bind</em> with a class name that doesn't exist in the <em>.ctrl.ts</em>{' '}
+        file, it will generate a class name without a scope, as shown in the example below.
+      </p>
+      <Image draggable={false} src="/imgs/3-14.png" alt="3-5" />
+      <Image draggable={false} src="/imgs/3-15.png" alt="3-5" />
+
       <p data-bold>Reusable Styling</p>
 
       <p>

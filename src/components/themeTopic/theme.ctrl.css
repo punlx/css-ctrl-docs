@@ -1,3 +1,6 @@
+.theme_highlight {
+  background-color: white;
+}
 .theme_wrapper img[alt="4-1"] {
   width: 700px;
 }
@@ -18,4 +21,16 @@
 }
 .theme_wrapper img[alt="4-7"] {
   width: 500px;
+}
+.theme_wrapper img[alt="4-8"] {
+  width: 500px;
+}
+.theme_wrapper img[alt="4-9"] {
+  width: 500px;
+}
+.theme_wrapper img[alt="4-10"] {
+  width: 340px;
+}
+.theme_wrapper img[alt="4-11"] {
+  width: 450px;
 }

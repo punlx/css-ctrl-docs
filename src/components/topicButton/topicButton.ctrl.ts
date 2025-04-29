@@ -35,6 +35,9 @@ export const topicButtoncss = css<{ wrap: ['start', 'theming', 'utilities', 'err
       px[16px]
       py[12px]
       ts[0.25s ease]
+      active(
+        bg[rgb(255,255,255,0.4)]
+      )
       hover(
         bd[2px solid #c6c4d3]
       )

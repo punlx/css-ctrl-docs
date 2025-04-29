@@ -1,8 +1,12 @@
 import './theme.ctrl.css';
 import { css } from 'css-ctrl';
 
-export const themecss = css<{ wrapper: [] }>`
+export const themecss = css<{ highlight: []; wrapper: [] }>`
   @scope theme
+
+  .highlight {
+    bg[white]
+  }
 
   .wrapper {
 
@@ -34,6 +38,22 @@ export const themecss = css<{ wrapper: [] }>`
 
       > &[alt='4-7'] {
         w[500px]
+      }
+
+      > &[alt='4-8'] {
+        w[500px]
+      }
+
+      > &[alt='4-9'] {
+        w[500px]
+      }
+
+      > &[alt='4-10'] {
+        w[340px]
+      }
+
+      > &[alt='4-11'] {
+        w[450px]
       }
     }
   }

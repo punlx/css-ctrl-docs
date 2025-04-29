@@ -18,30 +18,30 @@ export const TopicButton = () => {
 
   return (
     <div ref={ref} className={topicButtoncss.wrap}>
-      <div onClick={() => chooseTopic('start')} data-topic="start">
+      <div tabIndex={0} onClick={() => chooseTopic('start')} data-topic="start">
         <p>Quick</p>
         <p>Start</p>
         <code>.ctrl.ts</code>
       </div>
-      <div onClick={() => chooseTopic('styling')} data-topic="styling">
+      <div tabIndex={0} onClick={() => chooseTopic('styling')} data-topic="styling">
         <p>More</p>
         <p>Styling</p>
         <code>.ctrl.ts</code>
       </div>
 
-      <div onClick={() => chooseTopic('utilities')} data-topic="utilities">
+      <div tabIndex={0} onClick={() => chooseTopic('utilities')} data-topic="utilities">
         <p>Styling</p>
         <p>Utilities</p>
         <code>.ctrl.ts</code>
       </div>
 
-      <div onClick={() => chooseTopic('theming')} data-topic="theming">
+      <div tabIndex={0} onClick={() => chooseTopic('theming')} data-topic="theming">
         <p>Create</p>
         <p>Design System</p>
         <code>ctrl.theme.ts</code>
       </div>
 
-      <div onClick={() => chooseTopic('errors')} data-topic="errors">
+      <div tabIndex={0} onClick={() => chooseTopic('errors')} data-topic="errors">
         <p>Rules</p>
         <p>and</p>
         <code>Errors</code>

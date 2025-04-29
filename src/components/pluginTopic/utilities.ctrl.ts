@@ -17,7 +17,7 @@ export const utilitiescss = css<{ wrapper: [] }>`
       }
 
       > &[alt='3-3'] {
-        w[680px]
+        w[600px]
       }
 
       > &[alt='3-4'] {
