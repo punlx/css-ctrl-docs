@@ -1,3 +1,7 @@
 export const ErrorTopic = () => {
-  return <div>ErrorTopic</div>;
+  return (
+    <div>
+      <p data-bold>Upcoming...</p>
+    </div>
+  );
 };

@@ -3,6 +3,20 @@ import { stylingTopiccss } from './stylingTopic.ctrl';
 import { popover } from 'css-ctrl/popover';
 import { utilscss } from './utils.ctrl';
 import { Image } from '../../shared/Image'; // 👉 เพิ่มตรงนี้
+import img1 from '../../assets/imgs/1-1.gif';
+import img2 from '../../assets/imgs/1-2.gif';
+import img3 from '../../assets/imgs/1-3.png';
+import img4 from '../../assets/imgs/1-4.gif';
+import img5 from '../../assets/imgs/1-5.png';
+import img6 from '../../assets/imgs/1-6.gif';
+import img7 from '../../assets/imgs/1-7.gif';
+import img8 from '../../assets/imgs/1-8.png';
+import img81 from '../../assets/imgs/1-8.1.png';
+import img9 from '../../assets/imgs/1-9.png';
+import img10 from '../../assets/imgs/1-10.png';
+import img11 from '../../assets/imgs/1-11.png';
+import img111 from '../../assets/imgs/1-11.1.png';
+import img12 from '../../assets/imgs/1-12.gif';
 
 const openNewTabPopover = popover({
   controls: 'open-new-tab',
@@ -167,7 +181,7 @@ export const StylingTopic = () => {
           </em>
         </p>
       </div>
-      <Image draggable={false} width={700} src="/imgs/2.gif" alt="" />
+      <Image draggable={false} width={700} src={img2} alt="" />
 
       {/* Get started */}
       <p data-bold>Get Started</p>
@@ -182,7 +196,7 @@ export const StylingTopic = () => {
         <em data-lib>utils.css.ts</em>, making <em data-lib>utils.ctrl.ts</em> ready for use in{' '}
         <em>your UI.</em>
       </p>
-      <Image draggable={false} width={700} src="/imgs/1.gif" alt="" />
+      <Image draggable={false} width={700} src={img1} alt="" />
       <p>
         <em data-lib className="first-letter">
           css-ctrl
@@ -196,7 +210,7 @@ export const StylingTopic = () => {
 
       <div className="img-detail">
         <div>Compiled CSS</div>
-        <Image draggable={false} data-img-3 src="/imgs/3.png" alt="" data-desc="test" />
+        <Image draggable={false} data-img-3 src={img3} alt="" data-desc="test" />
       </div>
       <p>
         <em className="first-letter" data-lib>
@@ -215,10 +229,10 @@ export const StylingTopic = () => {
         <em data-lib>css-ctrl compiler</em>, which <em>generates types</em> and enables{' '}
         <em>class name suggestions.</em>
       </p>
-      <Image draggable={false} src="/imgs/4.gif" data-img-4 alt="" />
+      <Image draggable={false} src={img4} data-img-4 alt="" />
       <div className="img-detail">
         <div>DOM</div>
-        <Image draggable={false} data-img-5 src="/imgs/5.png" alt="" />
+        <Image draggable={false} data-img-5 src={img5} alt="" />
       </div>
       <p data-bold>Dynamic Styling</p>
       <p>
@@ -235,7 +249,7 @@ export const StylingTopic = () => {
       </p>
       <div className="img-detail">
         <div>$properties</div>
-        <Image draggable={false} src="/imgs/6.gif" data-img-6 alt="" />
+        <Image draggable={false} src={img6} data-img-6 alt="" />
       </div>
       <p>
         <span className="first-letter">When</span> you <em>save</em> the file, the{' '}
@@ -243,7 +257,7 @@ export const StylingTopic = () => {
         <em data-lib>.get</em> to <em>know</em> which <em data-lib>$properties</em> can be{' '}
         <em>set.</em>
       </p>
-      <Image draggable={false} src="/imgs/7.gif" data-img-7 alt="" />
+      <Image draggable={false} src={img7} data-img-7 alt="" />
       <div className="img-detail">
         <div
           tabIndex={0}
@@ -267,9 +281,9 @@ export const StylingTopic = () => {
           UI
         </div>
         {!toggleImg8 ? (
-          <Image draggable={false} src="/imgs/8.png" data-img-7 alt="" />
+          <Image draggable={false} src={img8} data-img-7 alt="" />
         ) : (
-          <Image draggable={false} src="/imgs/8.1.png" data-img-7 alt="" />
+          <Image draggable={false} src={img81} data-img-7 alt="" />
         )}
       </div>
       <p>
@@ -279,7 +293,7 @@ export const StylingTopic = () => {
         below.
       </p>
 
-      <Image draggable={false} src="/imgs/9.png" data-img-7 alt="" />
+      <Image draggable={false} src={img9} data-img-7 alt="" />
       <p>
         <span className="first-letter">⚠️</span>
         <em>Avoid</em> using a <em data-lib>--&variable</em> name that <em>matches</em> a{' '}
@@ -291,7 +305,7 @@ export const StylingTopic = () => {
 
       <div className="img-detail">
         <div>Usage</div>
-        <Image draggable={false} src="/imgs/10.png" data-img-7 alt="" />
+        <Image draggable={false} src={img10} data-img-7 alt="" />
       </div>
       <div className="img-detail">
         <div
@@ -316,9 +330,9 @@ export const StylingTopic = () => {
           UI
         </div>
         {!toggleImg11 ? (
-          <Image draggable={false} src="/imgs/11.png" data-img-7 alt="" />
+          <Image draggable={false} src={img11} data-img-7 alt="" />
         ) : (
-          <Image draggable={false} src="/imgs/11.1.png" data-img-7 alt="" />
+          <Image draggable={false} src={img111} data-img-7 alt="" />
         )}
       </div>
       <p data-bold>Reset Variables</p>
@@ -328,7 +342,7 @@ export const StylingTopic = () => {
         <em>reset</em> function can be used at <em>three different levels:</em> removes the
         corresponding <em>CSS variable</em> from the <em>root</em>.
       </p>
-      <Image draggable={false} src="/imgs/12.gif" alt="" />
+      <Image draggable={false} src={img12} alt="" />
 
       <ul>
         <li>

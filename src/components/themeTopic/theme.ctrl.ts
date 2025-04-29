@@ -55,6 +55,14 @@ export const themecss = css<{ highlight: []; wrapper: [] }>`
       > &[alt='4-11'] {
         w[450px]
       }
+
+      > &[alt='4-14'] {
+        w[700px]
+      }
+
+      > &[alt='4-15'] {
+        w[450px]
+      }
     }
   }
 `;

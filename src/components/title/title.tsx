@@ -1,10 +1,11 @@
 import { titlecss } from './title.ctrl';
 import { Image } from '../../shared/Image';
+import iconfull from '../../assets/imgs/iconfull.png'; // ✅ import จาก assets (Vite จะใส่ hash ตอน build)
 
 export const Title = () => {
   return (
     <div className={titlecss.wrap}>
-      <Image draggable={false} src="/imgs/iconfull.png" alt="" />
+      <Image draggable={false} src={iconfull} alt="Icon Full" />
       <div className={titlecss.title}>
         <p data-blue>Zero-Runtime</p>
         <p data-white>CSS + TS</p>
@@ -27,5 +28,3 @@ export const Title = () => {
     </div>
   );
 };
-{
-}
