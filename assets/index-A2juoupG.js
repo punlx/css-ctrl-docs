@@ -373,7 +373,7 @@ Error generating stack: `+t.message+`
       w[700px]
       d[block]
       screen(
-        max-w[700px],  max-w[100%] h[auto]
+        max-w[700px],  max-w[100%] h[auto] w[100%]!
       )
     }
 
