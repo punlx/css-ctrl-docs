@@ -59,6 +59,14 @@ export const utilitiescss = css<{ wrapper: [] }>`
       > &[alt='3-13'] {
         w[450px]
       }
+
+      > &[alt='3-18'] {
+        w[500px]
+      }
+
+      > &[alt='3-19'] {
+        w[500px]
+      }
     }
   }
 `;

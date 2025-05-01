@@ -7,23 +7,12 @@ export const Title = () => {
     <div className={titlecss.wrap}>
       <Image draggable={false} src={iconfull} alt="Icon Full" />
       <div className={titlecss.title}>
-        <p data-blue>Zero-Runtime</p>
-        <p data-white>CSS + TS</p>
-        <p>built for</p>
-        <p data-blue>Fast Styling,</p>
-        <p data-white>Dynamic Styling</p>
-        <p>with</p>
-        <p data-blue>Type-Safe API,</p>
-        <p>and</p>
-        <p data-white>Design Systems</p>
-        <p>—</p>
-        <p data-blue>Very Lightweight</p>
-        <p>made for</p>
-        <p data-orange>developers</p>
-        <p>who love</p>
-        <p data-blue>Clean Code</p>
-        <p>and</p>
-        <p data-white>Great DX.</p>
+        <p data-bold>Effortless CSS with flexibility and high performance.</p>
+        <p>
+          Zero-Runtime CSS + TS. Built for fast, dynamic styling with a type-safe API and seamless
+          integration with design systems — a lightweight solution crafted for developers who value
+          clean code and exceptional DX.
+        </p>
       </div>
     </div>
   );

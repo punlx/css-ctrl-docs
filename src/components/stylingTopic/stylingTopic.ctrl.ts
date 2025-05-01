@@ -33,13 +33,16 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
     w[700px]
     screen(
       max-w[700px],
-      w[auto]
       px[16px]
       bs[border-box]
     )
     @use wrapper
     gp[42px]
     pb[120px]
+
+    > img[alt="1-2"] {
+      w[460px]
+    }
 
     > .zero-runtime-css-in-js {
       d[flex]
@@ -93,7 +96,7 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
       w[620px]
     }
 
-    > .first-letter {
+    > .fl {
       ml[32px]
     }
 
@@ -152,7 +155,7 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
       w[700px]
       d[block]
       screen(
-        max-w[700px],  max-w[100%] h[auto]
+        max-w[700px],  max-w[100%] h[auto] w[100%]!
       )
     }
 
@@ -189,6 +192,11 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
     }
 
     > em[data-lib] {
+      @use badge
+      bg[#373adb]
+    }
+
+    > .lib {
       @use badge
       bg[#373adb]
     }

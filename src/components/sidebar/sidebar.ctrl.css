@@ -1,0 +1,51 @@
+:root {
+  --v-sidebar_wrapper: hidden;
+  --op-sidebar_wrapper: 0;
+}
+.sidebar_wrapper {
+  transition: 0.25s ease;
+  visibility: var(--v-sidebar_wrapper);
+  opacity: var(--op-sidebar_wrapper);
+  position: fixed;
+  z-index: 1;
+  color: #b0b0b0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
+}
+@media only screen and (max-width: 1100px) {
+  .sidebar_wrapper {
+    padding-left: 6px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .sidebar_wrapper {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .sidebar_wrapper {
+    display: none;
+  }
+}
+.sidebar_wrapper .session-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar_wrapper .session-wrapper .topic {
+  user-select: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 12px;
+}
+.sidebar_wrapper .session-wrapper .topic:hover {
+  outline: 1px solid #878787;
+}
+.sidebar_wrapper .session-wrapper .topic.highlight {
+  color: white;
+}

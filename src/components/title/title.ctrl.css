@@ -61,8 +61,12 @@
     font-size: 24px;
   }
 }
-.title_title * {
-  margin-left: 12px;
-  display: inline;
-  color: var(--gray);
+.title_title p {
+  margin-top: 14px;
+  color: #a1a1a1;
+  font-size: 18px;
+}
+.title_title p[data-bold] {
+  color: white;
+  font-size: 44px;
 }

@@ -1,8 +1,9 @@
-
-
-
+:root {
+  --bg-utils_box: red;
+  --c-utils_box: red;
+  --color-utils_box: red;
+}
 .utils_box {
-  font-size: 16px;
-  line-height: 1.2;
-  font-family: Poppins-Thin;
+  background-color: var(--bg-utils_box);
+  color: var(--c-utils_box);
 }

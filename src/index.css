@@ -120,7 +120,12 @@ p {
   animation: twinkle 3.5s infinite ease-in-out alternate, floatXY 22s infinite ease-in-out;
   will-change: transform, opacity;
   animation-fill-mode: both;
-  filter:blur(1px)
+  filter: blur(1px);
+}
+@media only screen and (max-width: 660px) {
+  .star {
+    display: none;
+  }
 }
 
 @keyframes twinkle {
@@ -219,7 +224,7 @@ p {
   }
   50% {
     transform: translate(30px, -30px) scale(1.07) rotate(-1deg);
-    opacity: 0.825;
+    opacity: 0.9;
   }
   75% {
     transform: translate(-25px, -15px) scale(1.05) rotate(0.5deg);

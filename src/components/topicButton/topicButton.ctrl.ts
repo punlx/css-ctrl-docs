@@ -2,7 +2,7 @@ import './topicButton.ctrl.css';
 import { css } from 'css-ctrl';
 
 // css-ctrl mode:base
-export const topicButtoncss = css<{ wrap: ['start', 'theming', 'utilities', 'errors', 'styling'] }>`
+export const topicButtoncss = css<{ wrap: ['start', 'theming', 'utilities', 'errors', 'styling', 'visibility'] }>`
   @scope topicButton
 
   @const code {
@@ -10,45 +10,95 @@ export const topicButtoncss = css<{ wrap: ['start', 'theming', 'utilities', 'err
     c[--color]
     p[6px]
     br[12px]
-    fs[18px]
   }
 
   .wrap {
-    --&start[--gray]
-    --&theming[--gray]
-    --&utilities[--gray]
-    --&errors[--gray]
-    --&styling[--gray]
+    ps[sticky]
+    bg[black]
+    t[0]
+    py[12px]
+    --&start[transparent]
+    --&theming[transparent]
+    --&utilities[transparent]
+    --&errors[transparent]
+    --&styling[transparent]
+    --&visibility[none]
     d[flex]
-    gp[12px]
+    us[none]
+    gp[24px]
     c[--gray]
     d[flex]
     jc[center]
     fx-w[wrap]
+    z[1]
+    screen(
+      max-w[1401px],
+      fs[14px]
+      py[6px]
+      gp[12px]
+    )
+
+    > .hamburger {
+      cs[pointer]
+      jc[center]
+      ai[center]
+      w[100%]
+      fs[32px]
+      screen(
+        min-w[948px],
+        d[none]
+      )
+      screen(
+        max-w[948px],
+        d[flex]
+      )
+    }
+
+    > [data-topic] {
+      screen(
+        max-w[948px],
+        d[--&visibility]!
+        w[100%]
+        jc[center]
+        mx[12px]
+      )
+    }
+
+    > code {
+      fs[16px]
+      screen(
+        max-w[1401px],
+        fs[14px]
+      )
+    }
+
+    > .more-text {
+      screen(
+        max-w[1401px],
+        d[none]
+      )
+    }
 
     @query [data-topic] {
       d[flex]
-      bd[2px solid --gray]
       gp[12px]
       ai[center]
       br[12px]
       px[16px]
       py[12px]
       ts[0.25s ease]
+      ol[2px solid transparent]
       active(
         bg[rgb(255,255,255,0.4)]
       )
       hover(
-        bd[2px solid #c6c4d3]
-      )
-      before(
-        bd[--gray]
+        ol-c[#c6c4d3]
       )
       cs[pointer]
     }
 
     @query [data-topic="start"] {
-      bd-c[--&start]
+      ol-c[--&start]
 
       @query p:nth-child(2) {
         c[#ffffff]
@@ -62,7 +112,7 @@ export const topicButtoncss = css<{ wrap: ['start', 'theming', 'utilities', 'err
     }
 
     @query [data-topic="styling"] {
-      bd-c[--&styling]
+      ol-c[--&styling]
 
       @query p:nth-child(2) {
         c[#ffffff]
@@ -76,7 +126,7 @@ export const topicButtoncss = css<{ wrap: ['start', 'theming', 'utilities', 'err
     }
 
     @query [data-topic="theming"] {
-      bd-c[--&theming]
+      ol-c[--&theming]
 
       @query p:nth-child(2) {
         c[#ffffff]
@@ -90,7 +140,7 @@ export const topicButtoncss = css<{ wrap: ['start', 'theming', 'utilities', 'err
     }
 
     @query [data-topic="errors"] {
-      bd-c[--&errors]
+      ol-c[--&errors]
 
       @query p:nth-child(1) {
         c[white]
@@ -104,7 +154,7 @@ export const topicButtoncss = css<{ wrap: ['start', 'theming', 'utilities', 'err
     }
 
     @query [data-topic="utilities"] {
-      bd-c[--&utilities]
+      ol-c[--&utilities]
 
       @query p:nth-child(2) {
         c[white]

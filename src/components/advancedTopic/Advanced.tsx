@@ -22,7 +22,9 @@ import img2_17 from '../../assets/imgs/2-17.png';
 export const Advanced = () => {
   return (
     <div className={`${utilscss.box} ${advancedcss.wrapper}`}>
-      <p data-bold>More Styling</p>
+      <p data-bold className="session" id="More_Styling">
+        More Styling
+      </p>
       <p>
         <span className="fl">You</span> can use <em>real locally scoped CSS variables</em> and apply{' '}
         <em>!important</em> as follows:
@@ -47,7 +49,9 @@ export const Advanced = () => {
       <Image draggable={false} src={img2_7} alt="2-7" />
       <Image draggable={false} src={img2_8} alt="2-8" />
 
-      <p data-bold>Nested Styling</p>
+      <p data-bold className="session" id="Nested_Styling">
+        Nested Styling
+      </p>
       <p>
         <span className="fl">You</span> can create <em>nested styles</em> by typing the{' '}
         <em className="lib">"&gt;"</em> symbol. When you type <em className="lib">"&gt;"</em>, a{' '}
@@ -83,7 +87,9 @@ export const Advanced = () => {
       </p>
       <Image draggable={false} src={img2_9} alt="2-9" />
       <Image draggable={false} src={img2_10} alt="2-10" />
-      <p data-bold>Pseudo-classes</p>
+      <p data-bold className="session" id="Pseudo-classes">
+        Pseudo-classes
+      </p>
       <p>
         In addition to accessing <em>Pseudo-classes</em> through nested styling.
       </p>
@@ -96,7 +102,9 @@ export const Advanced = () => {
 
       <p>Both approaches will generate the same CSS output.</p>
       <Image draggable={false} src={img2_13} alt="2-13" />
-      <p data-bold>Responsive Design</p>
+      <p data-bold className="session" id="Responsive_Design">
+        Responsive Design
+      </p>
       <p>
         When using <em>@media query screen</em> or <em>@container</em>, you can apply them just like{' '}
         <em>Pseudo-functions</em>

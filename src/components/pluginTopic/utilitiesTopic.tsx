@@ -18,11 +18,15 @@ import img3_14 from '../../assets/imgs/3-14.png';
 import img3_15 from '../../assets/imgs/3-15.png';
 import img3_16 from '../../assets/imgs/3-16.png';
 import img3_17 from '../../assets/imgs/3-17.png';
+import img3_18 from '../../assets/imgs/3-18.png';
+import img3_19 from '../../assets/imgs/3-19.png';
 
 export const UtilitiesTopic = () => {
   return (
     <div className={`${utilscss.box} ${utilitiescss.wrapper}`}>
-      <p data-bold>Class Binding</p>
+      <p data-bold className="session" id="Class_Binding">
+        Class Binding
+      </p>
 
       <p>
         <em className="fl">css-ctrl</em> introduces <em>@bind</em>, allowing you to group multiple{' '}
@@ -53,6 +57,11 @@ export const UtilitiesTopic = () => {
         file, it will generate a class name without a scope, as shown in the example below.
       </p>
       <Image draggable={false} src={img3_14} alt="3-5" />
+      <p>
+        <span className="fl">A</span> ghost text <em className="lib">":any"</em> will appear to
+        indicate that <em>.primary</em> does not exist inside this <em className="lib">.ctrl.ts</em>{' '}
+        file.
+      </p>
       <Image draggable={false} src={img3_15} alt="3-5" />
 
       <p>
@@ -60,7 +69,9 @@ export const UtilitiesTopic = () => {
       </p>
       <Image draggable={false} src={img3_16} alt="3-5" />
 
-      <p data-bold>Reusable Styling</p>
+      <p data-bold className="session" id="Reusable_Styling">
+        Reusable Styling
+      </p>
 
       <p>
         <em className="fl">css-ctrl</em> provides <em>@const</em> and <em>@use</em> to make your{' '}
@@ -103,6 +114,16 @@ export const UtilitiesTopic = () => {
         You can use <em>@use</em> followed by multiple <em>const</em>.
       </p>
       <Image draggable={false} src={img3_17} alt="3-1" />
+      <p data-bold className="session" id="Animation">
+        Animation
+      </p>
+      <p>
+        <span className="fl">You</span> can use <em>keyframes</em> and <em>animations</em> just like
+        in regular CSS, but the <em>syntax</em> is slightly different.
+      </p>
+
+      <Image draggable={false} src={img3_18} alt="3-18" />
+      <Image draggable={false} src={img3_19} alt="3-19" />
       <p data-bold>Summary</p>
       <p>
         <span className="fl">With</span> <em data-lib>css-ctrl</em>, you can easily manage multiple

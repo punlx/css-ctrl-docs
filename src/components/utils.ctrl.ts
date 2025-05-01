@@ -46,6 +46,7 @@ export const utilscss = css<{ box: []; wrapper: [] }>`
       screen(
         max-w[700px],
         max-w[100%]
+        w[100%]!
         d[block]
         h[auto]
       )

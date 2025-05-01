@@ -1,12 +1,10 @@
-import { useSignals } from '@preact/signals-react/runtime';
-
-import { currentTopicSignal } from '../../signals/topic.signals';
 import { ErrorTopic } from '../errorTopic/ErrorTopic';
 import { StylingTopic } from '../stylingTopic/StylingTopic';
 import { ThemeTopic } from '../themeTopic/ThemeTopic';
 import { utilscss } from '../utils.ctrl';
 import { UtilitiesTopic } from '../pluginTopic/utilitiesTopic';
 import { Advanced } from '../advancedTopic/Advanced';
+import { useCurrentMenu } from '../../App';
 
 interface WrapperProps {
   children: React.ReactNode;
@@ -22,9 +20,9 @@ const Wrapper = ({ children }: WrapperProps) => {
 };
 
 export const TopicControl = () => {
-  useSignals();
+  const { currentMenu } = useCurrentMenu();
 
-  switch (currentTopicSignal.value) {
+  switch (currentMenu) {
     default:
     case 'start':
       return (

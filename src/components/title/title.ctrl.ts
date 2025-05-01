@@ -69,10 +69,15 @@ export const titlecss = css<{ wrap: []; title: [] }>`
       )
     }
 
-    @query * {
-      ml[12px]
-      d[inline]
-      c[--gray]
+    > p {
+      mt[14px]
+      c[#a1a1a1]
+      fs[18px]
+
+      > &[data-bold] {
+        c[white]
+        fs[44px]
+      }
     }
   }
 `;

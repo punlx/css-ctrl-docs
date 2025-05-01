@@ -18,22 +18,43 @@ import img4_13 from '../../assets/imgs/4-13.png';
 import img4_14 from '../../assets/imgs/4-14.png';
 import img4_15 from '../../assets/imgs/4-15.gif';
 import img4_16 from '../../assets/imgs/4-16.png';
+import img4_17 from '../../assets/imgs/4-17.png';
+import img4_18 from '../../assets/imgs/4-18.png';
+import img4_19 from '../../assets/imgs/4-19.gif';
+import img4_20 from '../../assets/imgs/4-20.png';
+import img4_21 from '../../assets/imgs/4-21.png';
+import img4_22 from '../../assets/imgs/4-22.gif';
+import img4_23 from '../../assets/imgs/4-23.png';
+import img4_24 from '../../assets/imgs/4-24.png';
+import img4_25 from '../../assets/imgs/4-25.png';
+import img4_26 from '../../assets/imgs/4-26.gif';
+import img4_27 from '../../assets/imgs/4-27.png';
+import img4_28 from '../../assets/imgs/4-28.gif';
+import img4_29 from '../../assets/imgs/4-29.png';
+import img4_30 from '../../assets/imgs/4-30.png';
+import img4_31 from '../../assets/imgs/4-31.png';
+import img4_32 from '../../assets/imgs/4-32.png';
+import img4_33 from '../../assets/imgs/4-33.png';
 
 export const ThemeTopic = () => {
   return (
     <div className={`${utilscss.box} ${themecss.wrapper}`}>
-      <p data-bold>Introduction</p>
+      <p data-bold className="session" id="Introduction">
+        Introduction
+      </p>
 
       <p>
         <span className="fl">The</span> theme system in <em>css-ctrl</em> is designed to create a
         seamless and smooth experience when working with <em>.ctrl.ts</em> files. It simplifies the
         usage of design tokens by providing access to global design elements such as{' '}
         <em>palette</em>, <em>typography</em>, <em>variables</em>, and <em>breakpoints</em>.
-        Additionally, it includes global utilities like <em>keyframes</em> and{' '}
-        <em>classes definitions</em>. Together, these features make integrating a design system into{' '}
+        Additionally, it includes global utilities like <em>keyframes</em> and <em>classes</em> and{' '}
+        <em>custom properties</em>. Together, these features make integrating a design system into{' '}
         <em>.ctrl.ts</em> files highly flexible.
       </p>
-      <p data-bold>Get Started</p>
+      <p data-bold className="session" id="Get_Started">
+        Get Started
+      </p>
       <p>
         <span className="fl">First,</span> you need to create a file named <em>ctrl.theme.ts</em>.
         This file should be placed either in the root folder, inside the <em>src</em> directory, or
@@ -43,7 +64,9 @@ export const ThemeTopic = () => {
       </p>
       <Image draggable={false} src={img4_11} alt="4-11" />
 
-      <p data-bold>Palette</p>
+      <p data-bold className="session" id="Palette">
+        Palette
+      </p>
       <p>
         <span className="fl">You</span> can create a palette using the{' '}
         <em className="lib">theme.palette()</em> method. The palette should be structured in a
@@ -61,7 +84,8 @@ export const ThemeTopic = () => {
       <p>
         <span className="fl">When</span> you save the file, the{' '}
         <em className="lib">css-ctrl compiler</em> will automatically generate a{' '}
-        <em className="lib">ctrl.theme.css</em> file.{' '}
+        <em className="lib">ctrl.theme.css</em> file and <em>import it back</em> into{' '}
+        <em className="lib">ctrl.theme.ts</em>.
       </p>
       <Image draggable={false} src={img4_3} alt="4-3" />
       <p>
@@ -83,7 +107,9 @@ export const ThemeTopic = () => {
       </p>
       <Image draggable={false} src={img4_6} alt="4-6" />
       <Image draggable={false} src={img4_7} alt="4-7" />
-      <p data-bold>Palette Setup</p>
+      <p data-bold className="session" id="Palette_Setup">
+        Palette Setup
+      </p>
       <p>
         <span className="fl">When</span> using CSR (such as ReactJS), you can simply import your{' '}
         <em className="lib">ctrl.theme.ts</em> directly. This automatically applies the color modes{' '}
@@ -112,7 +138,9 @@ export const ThemeTopic = () => {
         managing theme modes.
       </p>
 
-      <p data-bold>LocalStorage Support</p>
+      <p data-bold className="session" id="LocalStorage">
+        LocalStorage
+      </p>
 
       <p>
         <span className="fl">
@@ -123,16 +151,88 @@ export const ThemeTopic = () => {
       </p>
       <Image draggable={false} src={img4_12} alt="4-10" />
 
-      <p data-bold>Typography</p>
+      <p data-bold className="session" id="Typography">
+        Typography
+      </p>
       <p>
         You can create typography settings to use within <em>.ctrl.ts</em> files.
       </p>
       <Image draggable={false} src={img4_14} alt="4-14" />
       <p>
-        Next, use the <em className='lib'>ty</em> property to access the typography you created.
+        <span className="fl">⚠️</span> You can apply <em>any styles</em> without limitation, but you
+        should <em>consider</em> whether they are appropriate for{' '}
+        <em className="lib">typography</em>.
+      </p>
+      <p>
+        Next, use the <em className="lib">ty</em> property to access the typography you created.
       </p>
       <Image draggable={false} src={img4_15} alt="4-15" />
       <Image draggable={false} src={img4_16} alt="4-15" />
+      <p data-bold className="session" id="Global_Variables">
+        Global Variables
+      </p>
+      <p>
+        You can create <em>global variables</em> for use in <em className="lib">.ctrl.ts</em> files.
+      </p>
+      <Image draggable={false} src={img4_17} alt="4-17" />
+      <Image draggable={false} src={img4_18} alt="4-17" />
+      <p>
+        <span className="fl">You</span> can access these <em>global CSS variables</em> by using a{' '}
+        <em>CSS property</em> that accepts a <em>value</em>.
+      </p>
+      <Image draggable={false} src={img4_19} alt="4-19" />
+      <Image draggable={false} src={img4_20} alt="4-19" />
+      <p data-bold className="session" id="Breakpoints">
+        Breakpoints
+      </p>
+      <p>
+        <span className="fl">You</span> can define <em>breakpoints</em> for use in{' '}
+        <em className="lib">.ctrl.ts</em> files.
+      </p>
+      <Image draggable={false} src={img4_21} alt="4-19" />
+      <Image draggable={false} src={img4_22} alt="4-19" />
+      <Image draggable={false} src={img4_23} alt="4-19" />
+
+      <p data-bold className="session" id="Global_Classes">
+        Global Classes
+      </p>
+      <p>
+        <span className="fl">You</span> can create <em>global classes</em> for use in{' '}
+        <em className="lib">.ctrl.ts</em> files.
+      </p>
+      <Image draggable={false} src={img4_24} alt="4-19" />
+      <Image draggable={false} src={img4_25} alt="4-19" />
+      <p>
+        <span className="fl">To</span> use them in a <em className="lib">.ctrl.ts</em> file, you
+        need to use <em className="lib">@bind</em> to reference the <em>global class names</em>{' '}
+        defined in <em className="lib">ctrl.theme.ts</em>.
+      </p>
+      <Image draggable={false} src={img4_26} alt="4-19" />
+
+      <p data-bold className="session" id="Custom_Properties">
+        Custom Properties
+      </p>
+      <p>
+        <span className="fl">You</span> can create <em>Custom Properties</em> for use in{' '}
+        <em className="lib">.ctrl.ts</em> files.
+      </p>
+      <Image draggable={false} src={img4_27} alt="4-19" />
+      <Image draggable={false} src={img4_28} alt="4-19" />
+      <Image draggable={false} src={img4_29} alt="4-19" />
+      <p data-bold className="session" id="Global_Keyframes">
+        Global Keyframes
+      </p>
+      <p>
+        <span className="fl">You</span> can create <em>global keyframes</em> for use in{' '}
+        <em className="lib">.ctrl.ts</em> files.
+      </p>
+      <Image draggable={false} src={img4_30} alt="4-30" />
+      <Image draggable={false} src={img4_31} alt="4-30" />
+      <p>
+        <span className="fl">Use</span> it in <em className="lib">.ctrl.ts</em> like this:
+      </p>
+      <Image draggable={false} src={img4_32} alt="4-19" />
+      <Image draggable={false} src={img4_33} alt="4-19" />
     </div>
   );
 };

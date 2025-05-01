@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { stylingTopiccss } from './stylingTopic.ctrl';
-import { popover } from 'css-ctrl/popover';
 import { utilscss } from './utils.ctrl';
 import { Image } from '../../shared/Image'; // 👉 เพิ่มตรงนี้
 import img1 from '../../assets/imgs/1-1.gif';
@@ -17,54 +16,29 @@ import img10 from '../../assets/imgs/1-10.png';
 import img11 from '../../assets/imgs/1-11.png';
 import img111 from '../../assets/imgs/1-11.1.png';
 import img12 from '../../assets/imgs/1-12.gif';
-
-const openNewTabPopover = popover({
-  controls: 'open-new-tab',
-  type: 'tooltip',
-  transform: {
-    horizontal: 'center',
-    vertical: 'top',
-  },
-  anchor: {
-    horizontal: 'center',
-    vertical: 'bottom',
-  },
-});
-
-const copySuccesPopover = popover({
-  controls: 'copySuccesPopover',
-  type: 'modal',
-  close: 'close-action',
-  transform: {
-    horizontal: 'center',
-    vertical: 'top',
-  },
-  anchor: {
-    horizontal: 'center',
-    vertical: 'bottom',
-  },
-});
+import img13 from '../../assets/imgs/1-13.gif';
 
 const npm = 'npm install css-ctrl';
 const yarn = 'yarn add css-ctrl';
 
 let timeoutId: any = null;
 export const StylingTopic = () => {
+  const [isCopy, setIsCopy] = useState('');
   const [toggleImg8, setToggleImg8] = useState(false);
   const [toggleImg11, setToggleImg11] = useState(false);
 
-  const copy = (str: string, e: any) => {
+  const copy = (str: string) => {
+    setIsCopy(str);
     stylingTopiccss.get('cursorInstall').set({
       cs: 'default',
     });
-    copySuccesPopover.actions.show(e);
     if (timeoutId) clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
-      copySuccesPopover.actions.close(e);
       stylingTopiccss.get('cursorInstall').set({
         cs: 'pointer',
       });
-    }, 400);
+      setIsCopy('');
+    }, 1000);
     if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
       navigator.clipboard
         .writeText(str)
@@ -81,63 +55,51 @@ export const StylingTopic = () => {
     <div className={stylingTopiccss.box}>
       {/* Installation */}
 
-      {openNewTabPopover.panel(
-        <div className={stylingTopiccss.copyPopover}>Go to VSCode Marketplace.</div>
-      )}
-
-      {copySuccesPopover.panel(
-        <div className={stylingTopiccss.copyPopover}>Successfully copied.</div>
-      )}
-
       <div data-install-wrapper data-hoverborder>
         <div data-install-lib>
-          <p data-bold data-lib-text style={{ color: 'wheat' }}>
-            Library Installation
+          <p
+            id="Installation"
+            data-bold
+            className="session"
+            data-lib-text
+            style={{ color: 'wheat' }}
+          >
+            Installation
           </p>
         </div>
         <div data-wrapper>
           <p
             className={stylingTopiccss.cursorInstall}
-            {...copySuccesPopover.aria.trigger}
             data-thin
             data-install
             data-install-lib-txt
             tabIndex={0}
-            onClick={(e) => copy(npm, e)}
+            onClick={() => copy(npm)}
           >
-            {npm}
+            {isCopy === npm ? 'Successfully copied.' : npm}
           </p>
           <p
             className={stylingTopiccss.cursorInstall}
-            {...copySuccesPopover.aria.trigger}
             data-thin
             data-install
             data-install-lib-txt
             tabIndex={0}
-            onClick={(e) => copy(yarn, e)}
+            onClick={() => copy(yarn)}
           >
-            {yarn}
+            {isCopy === yarn ? 'Successfully copied.' : yarn}
           </p>
         </div>
 
         <div data-install-lib>
           <p data-bold data-lib-text style={{ color: '#c3b3f5' }}>
             <span>VSCode Extension</span>
-            <span>Installation</span>
           </p>
         </div>
         <p
           className={stylingTopiccss.cursorInstall}
-          {...openNewTabPopover.aria.trigger}
           data-thin
           data-install
           data-install-ext
-          onMouseEnter={(e) => {
-            openNewTabPopover.actions.show(e);
-          }}
-          onMouseLeave={(e) => {
-            openNewTabPopover.actions.close(e);
-          }}
           tabIndex={0}
           onClick={() => {
             window.open(
@@ -157,55 +119,55 @@ export const StylingTopic = () => {
       </div>
 
       {/* A quick introduction */}
-      <p data-bold>Introduction</p>
+      <p data-bold className="session" id="Introduction">
+        Introduction
+      </p>
       <div className="quickIntroWrapper">
         <p data-thin>
-          <em data-lib className="first-letter">
-            css-ctrl
-          </em>{' '}
-          isn’t built on traditional <em>CSS-in-JS</em> concepts — it’s a <em>new approach</em> to
-          writing and compiling <em>real CSS</em>, designed to{' '}
-          <em>accelerate your styling workflow</em> with greater{' '}
+          <em className="fl lib">css-ctrl</em> isn’t built on traditional <em>CSS-in-JS</em>{' '}
+          concepts — it’s a <em>new approach</em> to writing and compiling <em>real CSS</em>,
+          designed to <em>accelerate your styling workflow</em> with greater{' '}
           <em>speed, efficiency, and control.</em> You’ll define styles inside{' '}
-          <em data-lib>*.ctrl.ts</em> files using a <em>highly expressive syntax</em>. On save, the{' '}
-          <em data-lib>css-ctrl compiler</em> <em>automatically generates</em> a corresponding{' '}
-          <em data-lib>*.ctrl.css</em> file. This <em>compiled CSS</em> is <em>auto-imported</em>{' '}
-          back into the same <em data-lib>.ctrl.ts</em> file, meaning you only need a{' '}
-          <em>single import</em> wherever you apply styles in <em>your UI.</em>
+          <em className="lib">*.ctrl.ts</em> files using a <em>highly expressive syntax</em>. On
+          save, the <em className="lib">css-ctrl compiler</em> <em>automatically generates</em> a
+          corresponding <em className="lib">*.ctrl.css</em> file. This <em>compiled CSS</em> is{' '}
+          <em>auto-imported</em> back into the same <em className="lib">.ctrl.ts</em> file, meaning
+          you only need a <em>single import</em> wherever you apply styles in <em>your UI.</em>
         </p>
         <br />
         <p>
-          <em className="first-letter">
+          <em className="fl">
             If you enjoy fast styling, minimal tools, full styling control, and great DX — this
-            library, <em data-lib>css-ctrl</em>, is made for you.
+            library, <em className="lib">css-ctrl</em>, is made for you.
           </em>
         </p>
       </div>
-      <Image draggable={false} width={700} src={img2} alt="" />
+      <Image draggable={false} width={700} src={img2} alt="1-2" />
 
       {/* Get started */}
-      <p data-bold>Get Started</p>
-      <p data-thin>
-        <em className="first-letter">First,</em> you need to <em>create</em> a{' '}
-        <em data-lib>.ctrl.ts</em> file. For example, let's name it <em data-lib>utils.ctrl.ts</em>.
-        After that, you can create a <em data-lib>css-ctrl template</em> using the <em>snippet</em>{' '}
-        by simply typing <em data-lib>"ztrl"</em>. Once you <em>save,</em>{' '}
-        <em data-lib>css-ctrl compiler</em>
-        will <em>generate</em> the <em data-lib>CSS</em> in a <em>new file called</em>{' '}
-        <em data-lib>utils.ctrl.css</em>, and it will <em>automatically import </em>
-        <em data-lib>utils.css.ts</em>, making <em data-lib>utils.ctrl.ts</em> ready for use in{' '}
-        <em>your UI.</em>
+      <p data-bold className="session" id="Get_Started">
+        Get Started
       </p>
-      <Image draggable={false} width={700} src={img1} alt="" />
+      <p data-thin>
+        <em className="fl">First,</em> you need to <em>create</em> a{' '}
+        <em className="lib">.ctrl.ts</em> file. For example, let's name it{' '}
+        <em className="lib">utils.ctrl.ts</em>. After that, you can create a{' '}
+        <em className="lib">css-ctrl template</em> using the <em>snippet</em> by simply typing{' '}
+        <em className="lib">"ztrl"</em>. Once you <em>save,</em>{' '}
+        <em className="lib">css-ctrl compiler</em>
+        will <em>generate</em> the <em className="lib">CSS</em> in a <em>new file called</em>{' '}
+        <em className="lib">utils.ctrl.css</em>, and it will <em>automatically import </em>
+        <em className="lib">utils.css.ts</em>, making <em className="lib">utils.ctrl.ts</em> ready
+        for use in <em>your UI.</em>
+      </p>
+      <Image draggable={false} width={700} src={img1} alt="1-2" />
       <p>
-        <em data-lib className="first-letter">
-          css-ctrl
-        </em>{' '}
-        introduces a <em>unique</em>, intuitive <em>syntax</em> where you can create <em>styles</em>{' '}
-        simply by typing <em>short abbreviations.</em> you don't need to <em>memorize</em> a
-        completely <em>new syntax.</em> The <em data-lib>css-ctrl compiler</em> will{' '}
-        <em>suggests style completions</em> just like <em>regular CSS,</em> making the styling
-        process <em>smooth and natural</em> — with virtually <em>no learning curve</em> for styling.
+        <em className="fl lib">css-ctrl</em> introduces a <em>unique</em>, intuitive <em>syntax</em>{' '}
+        where you can create <em>styles</em> simply by typing <em>short abbreviations.</em> you
+        don't need to <em>memorize</em> a completely <em>new syntax.</em> The{' '}
+        <em className="lib">css-ctrl compiler</em> will <em>suggests style completions</em> just
+        like <em>regular CSS,</em> making the styling process <em>smooth and natural</em> — with
+        virtually <em>no learning curve</em> for styling.
       </p>
 
       <div className="img-detail">
@@ -213,20 +175,18 @@ export const StylingTopic = () => {
         <Image draggable={false} data-img-3 src={img3} alt="" data-desc="test" />
       </div>
       <p>
-        <em className="first-letter" data-lib>
-          utils.ctrl.css
-        </em>{' '}
-        contains a <em>scope class name</em> generated from <em data-lib>@scope utils</em>. You can{' '}
-        either set <em data-lib>@scope none</em> or omit <em data-lib>@scope</em> entirely to create{' '}
-        a <em>non-scoped</em> class. <em>However,</em> doing so will <em>disable</em> the{' '}
+        <em className="fl lib">utils.ctrl.css</em> contains a <em>scope class name</em> generated
+        from <em className="lib">@scope utils</em>. You can either set{' '}
+        <em className="lib">@scope none</em> or omit <em className="lib">@scope</em> entirely to
+        create a <em>non-scoped</em> class. <em>However,</em> doing so will <em>disable</em> the{' '}
         <em>ability</em> to use <em>dynamic CSS variables</em>
       </p>
 
       <p>
-        <em className="first-letter">After</em> creating the <em data-lib>utils.ctrl.ts</em> file,
-        you simply need to <em>import</em> it into <em>your UI</em> and use the <em>class names</em>{' '}
-        you have <em>defined</em> — with the <em>help</em> of the{' '}
-        <em data-lib>css-ctrl compiler</em>, which <em>generates types</em> and enables{' '}
+        <em className="fl">After</em> creating the <em className="lib">utils.ctrl.ts</em> file, you
+        simply need to <em>import</em> it into <em>your UI</em> and use the <em>class names</em> you
+        have <em>defined</em> — with the <em>help</em> of the{' '}
+        <em className="lib">css-ctrl compiler</em>, which <em>generates types</em> and enables{' '}
         <em>class name suggestions.</em>
       </p>
       <Image draggable={false} src={img4} data-img-4 alt="" />
@@ -234,28 +194,31 @@ export const StylingTopic = () => {
         <div>DOM</div>
         <Image draggable={false} data-img-5 src={img5} alt="" />
       </div>
-      <p data-bold>Dynamic Styling</p>
+      <p data-bold className="session" id="Dynamic_Styling">
+        Dynamic Styling
+      </p>
       <p>
-        <span className="first-letter">You</span> might have <em>noticed</em> that{' '}
-        <em data-lib>.get</em> was also <em>suggested</em> along with the <em>class names</em> you{' '}
-        created. This <em>allows</em> you to <em>access</em> <em>dynamic CSS variables</em>, which
-        come in two types: <em data-lib>$properties</em> and <em data-lib>--&variables</em> of the{' '}
+        <span className="fl">You</span> might have <em>noticed</em> that{' '}
+        <em className="lib">.get</em> was also <em>suggested</em> along with the{' '}
+        <em>class names</em> you created. This <em>allows</em> you to <em>access</em>{' '}
+        <em>dynamic CSS variables</em>, which come in two types:{' '}
+        <em className="lib">$properties</em> and <em className="lib">--&variables</em> of the{' '}
         <em>.box</em> class.
       </p>
 
       <p>
-        To apply <em>dynamic properties,</em> you simply add a <em data-lib>$</em> in front of{' '}
-        <em data-lib>property</em> like below.
+        To apply <em>dynamic properties,</em> you simply add a <em className="lib">$</em> in front
+        of <em className="lib">property</em> like below.
       </p>
       <div className="img-detail">
         <div>$properties</div>
         <Image draggable={false} src={img6} data-img-6 alt="" />
       </div>
       <p>
-        <span className="first-letter">When</span> you <em>save</em> the file, the{' '}
-        <em data-lib>css-ctrl compiler</em> will <em>automatically generate types,</em> allowing{' '}
-        <em data-lib>.get</em> to <em>know</em> which <em data-lib>$properties</em> can be{' '}
-        <em>set.</em>
+        <span className="fl">When</span> you <em>save</em> the file, the{' '}
+        <em className="lib">css-ctrl compiler</em> will <em>automatically generate types,</em>{' '}
+        allowing <em className="lib">.get</em> to <em>know</em> which{' '}
+        <em className="lib">$properties</em> can be <em>set.</em>
       </p>
       <Image draggable={false} src={img7} data-img-7 alt="" />
       <div className="img-detail">
@@ -287,20 +250,20 @@ export const StylingTopic = () => {
         )}
       </div>
       <p>
-        <span className="first-letter">To</span> apply <em>dynamic variables</em>, simply add{' '}
-        <em data-lib>--&</em> in front of <em>Locally Scoped CSS Variables.</em> When you{' '}
-        <em>save</em>, the <em data-lib>css-ctrl compiler</em> will <em>generate types</em> as shown
-        below.
+        <span className="fl">To</span> apply <em>dynamic variables</em>, simply add{' '}
+        <em className="lib">--&</em> in front of <em>Locally Scoped CSS Variables.</em> When you{' '}
+        <em>save</em>, the <em className="lib">css-ctrl compiler</em> will <em>generate types</em>{' '}
+        as shown below.
       </p>
 
       <Image draggable={false} src={img9} data-img-7 alt="" />
       <p>
-        <span className="first-letter">⚠️</span>
-        <em>Avoid</em> using a <em data-lib>--&variable</em> name that <em>matches</em> a{' '}
-        <em data-lib>$property</em>, as <em data-lib>$properties</em> have <em>fixed names</em>.
-        Also, <em>avoid</em> using both <em data-lib>$properties</em> and{' '}
-        <em data-lib>--&variables</em> within the <em>same style property</em> — doing so will{' '}
-        <em>cause errors during compilation.</em>
+        <span className="fl">⚠️</span>
+        <em>Avoid</em> using a <em className="lib">--&variable</em> name that <em>matches</em> a{' '}
+        <em className="lib">$property</em>, as <em className="lib">$properties</em> have{' '}
+        <em>fixed names</em>. Also, <em>avoid</em> using both <em className="lib">$properties</em>{' '}
+        and <em className="lib">--&variables</em> within the <em>same style property</em> — doing so
+        will <em>cause errors during compilation.</em>
       </p>
 
       <div className="img-detail">
@@ -335,11 +298,13 @@ export const StylingTopic = () => {
           <Image draggable={false} src={img111} data-img-7 alt="" />
         )}
       </div>
-      <p data-bold>Reset Variables</p>
+      <p data-bold className="session" id="Reset_Variables">
+        Reset Variables
+      </p>
       <p>
-        <span className="first-letter">As</span> you <em>experienced</em> when trying{' '}
-        <em data-lib>Try onClick</em>, pressing <em data-lib>Reset</em> immediately The{' '}
-        <em>reset</em> function can be used at <em>three different levels:</em> removes the
+        <span className="fl">As</span> you <em>experienced</em> when trying{' '}
+        <em className="lib">Try onClick</em>, pressing <em className="lib">Reset</em> immediately
+        The <em>reset</em> function can be used at <em>three different levels:</em> removes the
         corresponding <em>CSS variable</em> from the <em>root</em>.
       </p>
       <Image draggable={false} src={img12} alt="" />
@@ -350,7 +315,7 @@ export const StylingTopic = () => {
             <em>
               <span className="const">utilscss</span>.reset<span className="brackets">()</span>
             </em>{' '}
-            — resets all <em>dynamic CSS variables</em> inside <em data-lib>utilscss</em>.
+            — resets all <em>dynamic CSS variables</em> inside <em className="lib">utilscss</em>.
           </p>
         </li>
         <li>
@@ -373,23 +338,34 @@ export const StylingTopic = () => {
               <span className="brackets">(</span>[<span className="inside-text">"bg"</span>]
               <span className="brackets">)</span>
             </em>{' '}
-            — resets only specific <em>dynamic variables</em> like <em data-lib>$properties</em> or{' '}
-            <em data-lib>--&variables</em> inside the <em>.box</em> class.
+            — resets only specific <em>dynamic variables</em> like{' '}
+            <em className="lib">$properties</em> or <em className="lib">--&variables</em> inside the{' '}
+            <em>.box</em> class.
           </p>
         </li>
       </ul>
-      <p data-bold>⚡Performance</p>
+      <p data-bold className="session" id="Get_Values">
+        Get Values
+      </p>
       <p>
-        <em data-lib className="first-letter">
-          css-ctrl
-        </em>{' '}
-        minimizes <em>DOM workload</em> by <em>avoiding</em> runtime <em>CSS rule injection</em>,
-        unlike traditional <em>CSS-in-JS</em> techniques, which can trigger <em>repaint</em>,{' '}
-        <em>reflow</em>, or <em>dynamic CSS updates</em> during styling changes.{' '}
-        <em>Instead of recreating</em> styles at runtime, <em data-lib>css-ctrl</em> leverages{' '}
-        <em>CSS variables</em> for dynamic updates — ensuring that even when <em>thousands</em> of{' '}
-        <em data-lib>$properties</em> or <em data-lib>--&variables</em> are updated, performance
-        remains <em>fast and stable</em>. <em data-lib>css-ctrl</em> <em>optimizes</em> updates by{' '}
+        <span className="fl">You</span> can <em>get dynamic CSS variables</em>, but it must be done{' '}
+        <em>asynchronously</em>. This is because, under the hood, it waits for the <em>DOM</em> to
+        complete the <em>setProperty</em> before you can reliably{' '}
+        <em>retrieve the actual style values</em> that were set.
+      </p>
+      <Image draggable={false} src={img13} alt="" />
+      <p data-bold className="session" id="⚡Performance">
+        ⚡Performance
+      </p>
+      <p>
+        <em className="fl lib">css-ctrl</em> minimizes <em>DOM workload</em> by <em>avoiding</em>{' '}
+        runtime <em>CSS rule injection</em>, unlike traditional <em>CSS-in-JS</em> techniques, which
+        can trigger <em>repaint</em>, <em>reflow</em>, or <em>dynamic CSS updates</em> during
+        styling changes. <em>Instead of recreating</em> styles at runtime,{' '}
+        <em className="lib">css-ctrl</em> leverages <em>CSS variables</em> for dynamic updates —
+        ensuring that even when <em>thousands</em> of <em className="lib">$properties</em> or{' '}
+        <em className="lib">--&variables</em> are updated, performance remains{' '}
+        <em>fast and stable</em>. <em className="lib">css-ctrl</em> <em>optimizes</em> updates by{' '}
         <em>batching</em> and <em>applying</em> thousands of <em>CSS variable changes</em> within a{' '}
         <em>single frame,</em> without any noticeable impact on <em>performance</em>.
       </p>
@@ -399,21 +375,21 @@ export const StylingTopic = () => {
       </p>
 
       <p>
-        <span className="first-letter">Traditional</span> <em>zero-runtime CSS-in-JS</em> libraries{' '}
-        generate <em>static CSS</em> at <em>build time,</em> offering <em>fast load times</em> but{' '}
-        providing <em>less runtime flexibility</em> for dynamic styling. They often require{' '}
-        precompiling <em>static variables</em>, which can restrict certain dynamic use cases.
+        <span className="fl">Traditional</span> <em>zero-runtime CSS-in-JS</em> libraries generate{' '}
+        <em>static CSS</em> at <em>build time,</em> offering <em>fast load times</em> but providing{' '}
+        <em>less runtime flexibility</em> for dynamic styling. They often require precompiling{' '}
+        <em>static variables</em>, which can restrict certain dynamic use cases.
       </p>
       <p>
-        <span className="first-letter">In</span> contrast, <em data-lib>css-ctrl</em> enables{' '}
+        <span className="fl">In</span> contrast, <em className="lib">css-ctrl</em> enables{' '}
         <em>true runtime flexibility</em> by using <em>CSS Variables</em> — allowing thousands of{' '}
         <em>dynamic updates</em> without <em>injecting</em> new styles or impacting{' '}
         <em>performance</em>.
       </p>
       <p data-bold>Summary</p>
       <p>
-        <span className="first-letter">With</span> <em data-lib>css-ctrl</em>, you get the best of
-        both worlds — true runtime flexibility and zero-runtime performance — unlocking a powerful,
+        <span className="fl">With</span> <em className="lib">css-ctrl</em>, you get the best of both
+        worlds — true runtime flexibility and zero-runtime performance — unlocking a powerful,
         efficient, and intuitive styling experience.
       </p>
     </div>
