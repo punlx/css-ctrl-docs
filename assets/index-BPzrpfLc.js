@@ -84,7 +84,7 @@ Error generating stack: `+t.message+`
     fx-w[wrap]
     screen(
       max-w[1401px],
-      fs[16px]
+      fs[14px]
       py[6px]
       gp[12px]
     )
@@ -113,7 +113,7 @@ Error generating stack: `+t.message+`
       fs[18px]
       screen(
         max-w[1401px],
-        fs[16px]
+        fs[14px]
       )
     }
 
