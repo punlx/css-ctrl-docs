@@ -17,6 +17,8 @@ import img11 from '../../assets/imgs/1-11.png';
 import img111 from '../../assets/imgs/1-11.1.png';
 import img12 from '../../assets/imgs/1-12.gif';
 import img13 from '../../assets/imgs/1-13.gif';
+import img14 from '../../assets/imgs/1-14.png';
+import img15 from '../../assets/imgs/1-15.gif';
 
 const npm = 'npm install css-ctrl';
 const yarn = 'yarn add css-ctrl';
@@ -194,6 +196,67 @@ export const StylingTopic = () => {
         <div>DOM</div>
         <Image draggable={false} data-img-5 src={img5} alt="" />
       </div>
+      <p data-bold className="session" id="Hide_CSS">
+        Hide CSS
+      </p>
+      <p>
+        <span className="fl">If</span> you want to keep your <em>folder structure cleaner,</em> you
+        can <em>hide the generated</em> <em data-lib>.ctrl.css</em> files (the files{' '}
+        <em>still exist,</em> they’re <em>just not shown</em>). To hide <em data-lib>.ctrl.css</em>{' '}
+        files, simply go to your <em data-lib>settings.json</em> and add the following{' '}
+        <em>configuration:</em>
+      </p>
+      <div className="img-detail">
+        <div
+          className="copy-config"
+          tabIndex={0}
+          onClick={(e) => {
+            stylingTopiccss.get('box').set({
+              copyConfig: 'default',
+            });
+            const target = e.currentTarget as HTMLElement;
+            target.textContent = 'copied';
+            if (timeoutId) clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+              stylingTopiccss.get('box').set({
+                copyConfig: 'pointer',
+              });
+              target.textContent = 'copy';
+            }, 1000);
+            if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+              navigator.clipboard
+                .writeText(
+                  `"files.exclude": {
+  "**/ctrl.theme.css": true,
+  "**/*.ctrl.css": true
+},`
+                )
+                .then(() => {})
+                .catch((err) => {
+                  console.error(err);
+                });
+            } else {
+              console.warn('❗ Clipboard API ไม่รองรับบนเบราว์เซอร์นี้');
+            }
+          }}
+        >
+          copy
+        </div>
+        <Image draggable={false} data-img-5 src={img14} alt="" />
+      </div>
+      <p>
+        A cleaner structure makes it feel just like writing <em>CSS-in-JS</em>.
+      </p>
+      <Image draggable={false} data-img-5 src={img15} alt="" />
+
+      <p>
+        <span className="fl">And</span> you <em>don’t need to worry</em> — when you <em>move</em> or{' '}
+        <em>delete</em> a <em className="lib">.ctrl.ts</em> file, any associated{' '}
+        <em data-lib>.ctrl.css</em> <em>won’t be left behind.</em> The{' '}
+        <em className="lib">css-ctrl compiler</em> will <em>automatically delete</em> the{' '}
+        corresponding <em data-lib>.ctrl.css</em> file as soon as the <em data-lib>.ctrl.ts</em> is
+        no longer present.
+      </p>
       <p data-bold className="session" id="Dynamic_Styling">
         Dynamic Styling
       </p>

@@ -12,6 +12,9 @@
 .stylingTopic_cursorInstall {
   cursor: var(--cs-stylingTopic_cursorInstall);
 }
+:root {
+  --copyConfig-stylingTopic_box: pointer;
+}
 .stylingTopic_box {
   display: flex;
   flex-direction: column;
@@ -81,6 +84,12 @@
 }
 .stylingTopic_box .img-detail {
   position: relative;
+}
+.stylingTopic_box .img-detail .copy-config {
+  cursor: var(--copyConfig-stylingTopic_box);
+  z-index: 1;
+  user-select: none;
+  transition: 0.125s ease;
 }
 .stylingTopic_box .img-detail [data-dom] {
   position: absolute;

@@ -1,7 +1,7 @@
 import './stylingTopic.ctrl.css';
 import { css } from 'css-ctrl';
 
-export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box: [] }>`
+export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box: ['copyConfig'] }>`
   @scope stylingTopic
 
   @const badge {
@@ -30,6 +30,7 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
   }
 
   .box {
+    --&copyConfig[pointer]
     w[700px]
     screen(
       max-w[700px],
@@ -102,6 +103,13 @@ export const stylingTopiccss = css<{ copyPopover: []; cursorInstall: ['cs']; box
 
     > .img-detail {
       ps[relative]
+
+      > .copy-config {
+        cs[--&copyConfig]
+        z[1]
+        us[none]
+        ts[0.125s ease]
+      }
 
       > [data-dom] {
         ps[absolute]
