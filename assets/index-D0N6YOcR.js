@@ -66,16 +66,15 @@ Error generating stack: `+t.message+`
   }
 
   .wrap {
-    --&isHumburger[false]
     ps[sticky]
     bg[black]
     t[0]
     py[12px]
-    --&start[--gray]
-    --&theming[--gray]
-    --&utilities[--gray]
-    --&errors[--gray]
-    --&styling[--gray]
+    --&start[transparent]
+    --&theming[transparent]
+    --&utilities[transparent]
+    --&errors[transparent]
+    --&styling[transparent]
     --&visibility[none]
     d[flex]
     gp[24px]
@@ -140,20 +139,18 @@ Error generating stack: `+t.message+`
       px[16px]
       py[12px]
       ts[0.25s ease]
+      ol[2px solid transparent]
       active(
         bg[rgb(255,255,255,0.4)]
       )
       hover(
-        ol[2px solid #c6c4d3]
-      )
-      before(
-        ol[--gray]
+        ol-c[#c6c4d3]
       )
       cs[pointer]
     }
 
     @query [data-topic="start"] {
-      bd-c[--&start]
+      ol-c[--&start]
 
       @query p:nth-child(2) {
         c[#ffffff]
@@ -167,7 +164,7 @@ Error generating stack: `+t.message+`
     }
 
     @query [data-topic="styling"] {
-      bd-c[--&styling]
+      ol-c[--&styling]
 
       @query p:nth-child(2) {
         c[#ffffff]
@@ -181,7 +178,7 @@ Error generating stack: `+t.message+`
     }
 
     @query [data-topic="theming"] {
-      bd-c[--&theming]
+      ol-c[--&theming]
 
       @query p:nth-child(2) {
         c[#ffffff]
@@ -195,7 +192,7 @@ Error generating stack: `+t.message+`
     }
 
     @query [data-topic="errors"] {
-      bd-c[--&errors]
+      ol-c[--&errors]
 
       @query p:nth-child(1) {
         c[white]
@@ -209,7 +206,7 @@ Error generating stack: `+t.message+`
     }
 
     @query [data-topic="utilities"] {
-      bd-c[--&utilities]
+      ol-c[--&utilities]
 
       @query p:nth-child(2) {
         c[white]
@@ -222,7 +219,7 @@ Error generating stack: `+t.message+`
       }
     }
   }
-`,e0=()=>{const r=ye.useRef(null),d=N=>{Ea.get("wrap").set({visibility:"none"}),eh.value=N,Ea.get("wrap").set({start:"--gray",theming:"--gray",utilities:"--gray",errors:"--gray",styling:"--gray",[N]:"--white"})};return i.jsxs("div",{ref:r,className:Ea.wrap,children:[i.jsxs("div",{tabIndex:0,onClick:()=>d("start"),"data-topic":"start",children:[i.jsx("p",{className:"more-text",children:"Quick"}),i.jsx("p",{children:"Start"}),i.jsx("code",{children:".ctrl.ts"})]}),i.jsxs("div",{tabIndex:0,onClick:()=>d("styling"),"data-topic":"styling",children:[i.jsx("p",{className:"more-text",children:"More"}),i.jsx("p",{children:"Styling"}),i.jsx("code",{children:".ctrl.ts"})]}),i.jsxs("div",{tabIndex:0,onClick:()=>d("utilities"),"data-topic":"utilities",children:[i.jsx("p",{className:"more-text",children:"Styling"}),i.jsx("p",{children:"Utilities"}),i.jsx("code",{children:".ctrl.ts"})]}),i.jsxs("div",{tabIndex:0,onClick:()=>d("theming"),"data-topic":"theming",children:[i.jsx("p",{className:"more-text",children:"Create"}),i.jsx("p",{children:"Design System"}),i.jsx("code",{children:"ctrl.theme.ts"})]}),i.jsxs("div",{tabIndex:0,onClick:()=>d("errors"),"data-topic":"errors",children:[i.jsx("p",{children:"Rules"}),i.jsx("p",{className:"more-text",children:"and"}),i.jsx("code",{children:"Errors"})]}),i.jsx("div",{className:"hamburger",onClick:async()=>{(await Ea.get("wrap").value(["visibility"])).visibility.value==="none"?Ea.get("wrap").set({visibility:"flex"}):Ea.get("wrap").set({visibility:"none"})},children:"🍔"})]})},t0=()=>i.jsx("div",{children:i.jsx("p",{"data-bold":!0,children:"Upcoming..."})}),Na=Le`
+`,e0=()=>{const r=ye.useRef(null),d=N=>{Ea.get("wrap").set({visibility:"none"}),eh.value=N,Ea.get("wrap").set({start:"transparent",theming:"transparent",utilities:"transparent",errors:"transparent",styling:"transparent",[N]:"--gray"})};return i.jsxs("div",{ref:r,className:Ea.wrap,children:[i.jsxs("div",{tabIndex:0,onClick:()=>d("start"),"data-topic":"start",children:[i.jsx("p",{className:"more-text",children:"Quick"}),i.jsx("p",{children:"Start"}),i.jsx("code",{children:".ctrl.ts"})]}),i.jsxs("div",{tabIndex:0,onClick:()=>d("styling"),"data-topic":"styling",children:[i.jsx("p",{className:"more-text",children:"More"}),i.jsx("p",{children:"Styling"}),i.jsx("code",{children:".ctrl.ts"})]}),i.jsxs("div",{tabIndex:0,onClick:()=>d("utilities"),"data-topic":"utilities",children:[i.jsx("p",{className:"more-text",children:"Styling"}),i.jsx("p",{children:"Utilities"}),i.jsx("code",{children:".ctrl.ts"})]}),i.jsxs("div",{tabIndex:0,onClick:()=>d("theming"),"data-topic":"theming",children:[i.jsx("p",{className:"more-text",children:"Create"}),i.jsx("p",{children:"Design System"}),i.jsx("code",{children:"ctrl.theme.ts"})]}),i.jsxs("div",{tabIndex:0,onClick:()=>d("errors"),"data-topic":"errors",children:[i.jsx("p",{children:"Rules"}),i.jsx("p",{className:"more-text",children:"and"}),i.jsx("code",{children:"Errors"})]}),i.jsx("div",{className:"hamburger",onClick:async()=>{(await Ea.get("wrap").value(["visibility"])).visibility.value==="none"?Ea.get("wrap").set({visibility:"flex"}):Ea.get("wrap").set({visibility:"none"})},children:"🍔"})]})},t0=()=>i.jsx("div",{children:i.jsx("p",{"data-bold":!0,children:"Upcoming..."})}),Na=Le`
   @scope stylingTopic
 
   @const badge {
