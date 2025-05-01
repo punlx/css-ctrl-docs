@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { topicButtoncss } from './topicButton.ctrl';
 
 import { useCurrentMenu } from '../../App';
@@ -8,9 +8,14 @@ export const TopicButton = () => {
 
   const ref = useRef<HTMLDivElement>(null);
   const chooseTopic = (str: string) => {
+    window.history.pushState({}, '', `?page=${str}`);
     setCurrentMenu(str);
-    document.documentElement.scrollTo({
-      top: 368,
+
+    requestAnimationFrame(() => {
+      const scroll = document.querySelector('.session') as HTMLElement;
+      document.documentElement.scrollTo({
+        top: scroll.offsetTop - 90,
+      });
     });
     topicButtoncss.get('wrap').set({
       visibility: 'none',
@@ -24,6 +29,22 @@ export const TopicButton = () => {
       [str]: '--gray',
     });
   };
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const pageParam = params.get('page');
+    if (pageParam) {
+      setCurrentMenu(pageParam);
+      topicButtoncss.get('wrap').set({
+        start: 'transparent',
+        theming: 'transparent',
+        utilities: 'transparent',
+        errors: 'transparent',
+        styling: 'transparent',
+        [pageParam]: '--gray',
+      });
+    }
+  }, [setCurrentMenu]);
 
   return (
     <div ref={ref} className={topicButtoncss.wrap}>

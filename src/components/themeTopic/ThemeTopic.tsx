@@ -44,23 +44,26 @@ export const ThemeTopic = () => {
       </p>
 
       <p>
-        <span className="fl">The</span> theme system in <em>css-ctrl</em> is designed to create a
-        seamless and smooth experience when working with <em>.ctrl.ts</em> files. It simplifies the
-        usage of design tokens by providing access to global design elements such as{' '}
-        <em>palette</em>, <em>typography</em>, <em>variables</em>, and <em>breakpoints</em>.
-        Additionally, it includes global utilities like <em>keyframes</em> and <em>classes</em> and{' '}
-        <em>custom properties</em>. Together, these features make integrating a design system into{' '}
-        <em>.ctrl.ts</em> files highly flexible.
+        <span className="fl">The</span> theme system in <em className="lib">css-ctrl</em> is
+        designed to create a seamless and smooth experience when working with{' '}
+        <em className="lib">.ctrl.ts</em> files. It simplifies the usage of design tokens by
+        providing access to global design elements such as <em>palette</em>, <em>typography</em>,{' '}
+        <em>variables</em>, and <em>breakpoints</em>. Additionally, it includes global utilities
+        like <em>keyframes</em>, <em>classes</em>, and <em>custom properties</em>. Together, these
+        features make integrating a design system into <em className="lib">.ctrl.ts</em> files
+        highly flexible.
       </p>
       <p data-bold className="session" id="Get_Started">
         Get Started
       </p>
       <p>
-        <span className="fl">First,</span> you need to create a file named <em>ctrl.theme.ts</em>.
-        This file should be placed either in the root folder, inside the <em>src</em> directory, or
-        at the top level of your project — typically near your <em>main.tsx</em> or <em>main.ts</em>{' '}
+        <span className="fl">First,</span> you need to create a file named{' '}
+        <em className="lib">ctrl.theme.ts</em>. This file should be placed either in the{' '}
+        <em>root folder</em>, inside the <em>src</em> directory, or at the top level of your project
+        — typically near your <em className="lib">main.tsx</em> or <em className="lib">main.ts</em>{' '}
         file, where root-level setup usually resides. This placement ensures that the{' '}
-        <em>css-ctrl compiler</em> can easily detect the file and function correctly.
+        <em className="lib">css-ctrl compiler</em> can easily detect the file and function
+        correctly.
       </p>
       <Image draggable={false} src={img4_11} alt="4-11" />
 
@@ -72,13 +75,13 @@ export const ThemeTopic = () => {
         <em className="lib">theme.palette()</em> method. The palette should be structured in a
         row-and-column format, where each row defines a color key (e.g., <em>'red-50'</em>), and
         each column represents a theme variant — such as <em>'light'</em>, <em>'dark'</em>, or{' '}
-        <em>'dim'</em> — with their corresponding color values.{' '}
+        <em>'dim'</em> — with their corresponding color values.
       </p>
       <Image draggable={false} src={img4_1} alt="4-1" />
       <p>
-        <span className="fl">The</span> first row represents the different color modes. In the
-        example, the formatting helps clearly visualize each mode, making the palette more organized
-        and easier to read.{' '}
+        <span className="fl">The</span> first row represents the different <em>color modes</em>. In
+        the example, the formatting helps clearly visualize each mode, making the palette more
+        organized and easier to read.
       </p>
       <Image draggable={false} src={img4_2} alt="4-2" />
       <p>
@@ -89,20 +92,21 @@ export const ThemeTopic = () => {
       </p>
       <Image draggable={false} src={img4_3} alt="4-3" />
       <p>
-        <span className="fl">To</span> use the palette in the <em>.ctrl.ts</em> file you created,
-        simply start typing <em>"--"</em>
-        just like when writing locally scoped CSS variables. The{' '}
-        <em className="lib">css-ctrl compiler</em> will automatically suggest the available color{' '}
-        names from your palette. (If the suggestions do not appear, try restarting VSCode.)
+        <span className="fl">To</span> use the <em>palette</em> in the{' '}
+        <em className="lib">.ctrl.ts</em> file you created, simply <em>start typing</em>{' '}
+        <em>"--"</em>, just like when writing <em>locally scoped CSS variables</em>. The{' '}
+        <em className="lib">css-ctrl compiler</em> will automatically <em>suggest</em> the{' '}
+        <em>available color names</em> from your <em>palette</em>. (If the suggestions do not
+        appear, try restarting <em>VSCode</em>.)
       </p>
       <Image draggable={false} src={img4_4} alt="4-4" />
       <p>
         <span className="fl">If</span> you want to display colors based on the mode you select,
-        simply add a comment like <em>// css-ctrl mode: mode-name</em>
+        simply add a comment like <em>// css-ctrl mode: mode-name</em>.
       </p>
       <Image draggable={false} src={img4_5} alt="4-5" />
       <p>
-        <span className="fl">Now,</span> when you start typing a color, a color swatch will
+        <span className="fl">Now,</span> when you start typing a color, a <em>color swatch</em> will
         automatically appear according to the mode you selected.
       </p>
       <Image draggable={false} src={img4_6} alt="4-6" />
@@ -111,26 +115,28 @@ export const ThemeTopic = () => {
         Palette Setup
       </p>
       <p>
-        <span className="fl">When</span> using CSR (such as ReactJS), you can simply import your{' '}
-        <em className="lib">ctrl.theme.ts</em> directly. This automatically applies the color modes{' '}
-        based on your palette setup without any additional steps.
+        <span className="fl">When</span> using <em>CSR</em> (such as <em>ReactJS</em>), you can
+        simply import your <em className="lib">ctrl.theme.ts</em> directly. This automatically
+        applies the <em>color modes</em> based on your palette setup without any additional steps.
       </p>
       <Image draggable={false} src={img4_9} alt="4-9" />
       <p>
-        <span className="fl">When</span> using SSR (such as NextJS), a few additional steps are
-        required to properly initialize the palette, as explained below.
+        <span className="fl">When</span> using <em>SSR</em> (such as <em>NextJS</em>), a few
+        additional steps are required to properly initialize the <em>palette</em>, as explained
+        below.
       </p>
       <Image draggable={false} src={img4_8} alt="4-8" />
       <p>
-        <span className="fl">In</span> Next.js, you simply call <em>palette.init()</em> after
-        hydration, once the client is ready.
+        <span className="fl">In</span> <em>Next.js</em>, you simply call <em>palette.init()</em>{' '}
+        after hydration, once the client is ready.
       </p>
       <Image draggable={false} src={img4_10} alt="4-10" />
       <p>
         <span className="fl">When</span> the app starts, the <em>html</em> tag (root) will
         automatically have a <em className="lib">class="default-mode"</em> applied. The default mode
-        corresponds to the first column in the first row that you set up in <em>theme.palette()</em>
-        . In the example, the default mode is <em>"light"</em>.
+        corresponds to the first column in the first row that you set up in{' '}
+        <em className="lib">theme.palette()</em>. In the example, the default mode is{' '}
+        <em>"light"</em>.
       </p>
       <Image draggable={false} src={img4_13} alt="4-10" />
       <p>
@@ -233,6 +239,15 @@ export const ThemeTopic = () => {
       </p>
       <Image draggable={false} src={img4_32} alt="4-19" />
       <Image draggable={false} src={img4_33} alt="4-19" />
+      <p data-bold>Summary</p>
+
+      <p>
+        <span className="fl">The</span> theme system in <em className="lib">css-ctrl</em> provides a
+        powerful, centralized way to manage design tokens across your project. With support for{' '}
+        <em>palette</em>, <em>typography</em>, <em>global variables</em>, <em>breakpoints</em>,{' '}
+        <em>custom properties</em>, and <em>global classes</em>, it enables seamless integration of
+        design systems into <em className="lib">.ctrl.ts</em> files.
+      </p>
     </div>
   );
 };

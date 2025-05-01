@@ -32,19 +32,21 @@ export const Advanced = () => {
       <Image draggable={false} src={img2_1} alt="2-1" />
       <p>
         <span className="fl">Notice</span> that <em>locally scoped CSS variables</em> are used
-        similarly to <em data-lib>--&variables</em>, but they do not support dynamic styling.
+        similarly to <em className="lib">--&variables</em>, but they do not support{' '}
+        <em>dynamic styling</em>.
       </p>
 
       <p>
         <span className="fl">For</span> <em>!important</em>, simply typing the <em>"!"</em> symbol
         will apply <em>!important</em> to that property. Additionally, the{' '}
-        <em data-lib>css-ctrl compiler</em> will generate a <em>ghost text</em> labeled{' '}
+        <em className="lib">css-ctrl compiler</em> will generate a <em>ghost text</em> labeled{' '}
         <em>"important"</em> to make it easier to spot.
       </p>
       <Image draggable={false} src={img2_4} alt="2-3" />
       <p>
-        <span className="fl">Locally scoped CSS variables</span> can be used in nested styling, both{' '}
-        when defining and when accessing from a parent class. For example:
+        <span className="fl">Locally scoped CSS variables</span> can be used in{' '}
+        <em>nested styling</em>, both when <em>defining</em> and when{' '}
+        <em>accessing from a parent class</em>. For example:
       </p>
       <Image draggable={false} src={img2_7} alt="2-7" />
       <Image draggable={false} src={img2_8} alt="2-8" />
@@ -54,36 +56,38 @@ export const Advanced = () => {
       </p>
       <p>
         <span className="fl">You</span> can create <em>nested styles</em> by typing the{' '}
-        <em className="lib">"&gt;"</em> symbol. When you type <em className="lib">"&gt;"</em>, a{' '}
+        <em className="lib">&gt;</em> symbol. When you type <em className="lib">&gt;</em>, a{' '}
         <em>ghost text</em> showing <em>"query"</em> will appear, indicating that you are entering{' '}
         <em>nested styling mode</em>. This allows you to freely use <em>CSS query selectors</em>{' '}
-        without any limitations, just like in SCSS.
+        without any limitations, just like in <em>SCSS</em>.
       </p>
       <Image draggable={false} src={img2_2} alt="2-2" />
       <p>
         <span className="fl">When</span> you save the file, the{' '}
-        <em className="lib">css-ctrl compiler</em> automatically formats the document to make nested{' '}
-        styling cleaner and easier to read.
+        <em className="lib">css-ctrl compiler</em> automatically <em>formats the document</em> to
+        make <em>nested styling</em> <em>cleaner</em> and <em>easier to read</em>.
       </p>
       <Image draggable={false} src={img2_3} alt="2-3" />
       <p>
         <span className="fl">What's</span> happening here is that we are using{' '}
-        <em className="lib">@scope.card</em>, which means we are accessing the scoped class name{' '}
-        <em>.card</em> under <em className="lib">@scope utils</em>. At the same time, we can also{' '}
-        directly access the unscoped class name <em>.primary</em> without going through any scope.
+        <em className="lib">@scope.card</em>, which means we are accessing the{' '}
+        <em>scoped class name</em> <em>.card</em> under <em className="lib">@scope utils</em>. At
+        the same time, we can also directly access the <em>unscoped class name</em>{' '}
+        <em>.primary</em> without going through any <em>scope</em>.
       </p>
 
       <p>
-        <span className="fl">You</span> can also use the <em>"&amp;"</em> symbol inside queries —{' '}
-        for example, <em>&amp;:hover {'{ ... }'}</em> — similar to how it's done in SCSS.
+        <span className="fl">You</span> can also use the <em>"&amp;"</em> symbol inside{' '}
+        <em>queries</em> — for example, <em>&amp;:hover {'{ ... }'}</em> — similar to how it's done
+        in <em>SCSS</em>.
       </p>
       <Image draggable={false} src={img2_5} alt="2-5" />
 
       <Image draggable={false} src={img2_6} alt="2-6" />
       <p>
-        <span className="fl">You</span> can perform <em>dynamic styling</em> inside nested styling{' '}
-        by using <em data-lib>--&variables</em>. However, <em data-lib>$properties</em> cannot be{' '}
-        used within nested styling.
+        <span className="fl">You</span> can perform <em>dynamic styling</em> inside{' '}
+        <em>nested styling</em> by using <em className="lib">--&variables</em>. However,{' '}
+        <em className="lib">$properties</em> cannot be used within <em>nested styling</em>.
       </p>
       <Image draggable={false} src={img2_9} alt="2-9" />
       <Image draggable={false} src={img2_10} alt="2-10" />
@@ -91,23 +95,26 @@ export const Advanced = () => {
         Pseudo-classes
       </p>
       <p>
-        In addition to accessing <em>Pseudo-classes</em> through nested styling.
+        <span className="fl">In</span> addition to accessing <em>Pseudo-classes</em> through{' '}
+        <em>nested styling</em>.
       </p>
       <Image draggable={false} src={img2_11} alt="2-11" />
 
       <p>
-        You can also use <em>Pseudo-functions</em> in a similar way.
+        <span className="fl">You</span> can also use <em>Pseudo-functions</em> in a similar way.
       </p>
       <Image draggable={false} src={img2_12} alt="2-12" />
 
-      <p>Both approaches will generate the same CSS output.</p>
+      <p>
+        <span className="fl">Both</span> approaches will generate the same <em>CSS output</em>.
+      </p>
       <Image draggable={false} src={img2_13} alt="2-13" />
       <p data-bold className="session" id="Responsive_Design">
         Responsive Design
       </p>
       <p>
-        When using <em>@media query screen</em> or <em>@container</em>, you can apply them just like{' '}
-        <em>Pseudo-functions</em>
+        <span className="fl">When</span> using <em className="lib">@media query screen</em> or{' '}
+        <em className="lib">@container</em>, you can apply them just like <em>Pseudo-functions</em>.
       </p>
       <Image draggable={false} src={img2_14} alt="2-14" />
       <Image draggable={false} src={img2_15} alt="2-15" />
@@ -128,10 +135,11 @@ export const Advanced = () => {
       <Image draggable={false} src={img2_17} alt="2-17" />
       <p data-bold>Summary</p>
       <p>
-        <span className="fl">With</span> <em data-lib>css-ctrl</em>, you can achieve clean,
-        powerful, and highly flexible styling — supporting locally scoped variables, nested styling,
-        pseudo-classes, pseudo-functions, and responsive design with a seamless developer
-        experience.
+        <span className="fl">With</span> <em className="lib">css-ctrl</em>, you can achieve{' '}
+        <em>clean</em>, <em>powerful</em>, and <em>highly flexible styling</em> — supporting{' '}
+        <em>locally scoped variables</em>, <em>nested styling</em>, <em>pseudo-classes</em>,{' '}
+        <em>pseudo-functions</em>, and <em>responsive design</em> with a{' '}
+        <em>seamless developer experience</em>.
       </p>
     </div>
   );
