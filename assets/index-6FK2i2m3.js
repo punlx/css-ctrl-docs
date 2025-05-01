@@ -251,7 +251,6 @@ Error generating stack: `+t.message+`
     w[700px]
     screen(
       max-w[700px],
-      w[auto]
       px[16px]
       bs[border-box]
     )
@@ -528,6 +527,7 @@ Error generating stack: `+t.message+`
       screen(
         max-w[700px],
         max-w[100%]
+        w[100%]!
         d[block]
         h[auto]
       )
