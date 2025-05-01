@@ -67,7 +67,7 @@ Error generating stack: `+t.message+`
 
   .wrap {
     ps[sticky]
-    bg[rgba(0,0,0,0.8)]
+    bg[rgba(0,0,0,1)]
     t[0]
     py[12px]
     --&start[--gray]
@@ -82,6 +82,7 @@ Error generating stack: `+t.message+`
     d[flex]
     jc[center]
     fx-w[wrap]
+    z[1]
     screen(
       max-w[1401px],
       fs[14px]
