@@ -75,6 +75,10 @@ export const themecss = css<{ highlight: []; wrapper: [] }>`
       > &[alt='4-30'] {
         w[400px]
       }
+
+      > &[alt='4-34'] {
+        w[700px]
+      }
     }
   }
 `;

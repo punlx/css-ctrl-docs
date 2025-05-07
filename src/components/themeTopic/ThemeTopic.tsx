@@ -35,6 +35,7 @@ import img4_30 from '../../assets/imgs/4-30.png';
 import img4_31 from '../../assets/imgs/4-31.png';
 import img4_32 from '../../assets/imgs/4-32.png';
 import img4_33 from '../../assets/imgs/4-33.png';
+import img4_34 from '../../assets/imgs/4-34.png';
 
 export const ThemeTopic = () => {
   return (
@@ -126,9 +127,11 @@ export const ThemeTopic = () => {
         below.
       </p>
       <Image draggable={false} src={img4_8} alt="4-8" />
+      <Image draggable={false} src={img4_34} alt="4-34" />
       <p>
         <span className="fl">In</span> <em>Next.js</em>, you simply call <em>palette.init()</em>{' '}
-        after hydration, once the client is ready.
+        after hydration, once the client is ready, and set the default mode on the <em>html</em>{' '}
+        tag.
       </p>
       <Image draggable={false} src={img4_10} alt="4-10" />
       <p>

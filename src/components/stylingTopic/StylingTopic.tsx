@@ -247,7 +247,6 @@ export const StylingTopic = () => {
       <p>
         A cleaner structure makes it feel just like writing <em>CSS-in-JS</em>.
       </p>
-      <Image draggable={false} data-img-5 src={img15} alt="" />
 
       <p>
         <span className="fl">And</span> you <em>don’t need to worry</em> — when you <em>move</em> or{' '}
@@ -257,6 +256,7 @@ export const StylingTopic = () => {
         corresponding <em data-lib>.ctrl.css</em> file as soon as the <em data-lib>.ctrl.ts</em> is
         no longer present.
       </p>
+      <Image draggable={false} data-img-5 src={img15} alt="" />
       <p data-bold className="session" id="Dynamic_Styling">
         Dynamic Styling
       </p>
